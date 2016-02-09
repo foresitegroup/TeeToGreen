@@ -1,6 +1,10 @@
 /*
 font-family: 'Oswald', sans-serif;
 font-family: 'Titillium Web', sans-serif;
+  light - 300
+  regular - 400
+  semibold - 600
+  bold - 700
 
 #161A10 - black
 #464647 - gray
@@ -37,6 +41,39 @@ A:hover, A:active {
   text-decoration: none;
 }
 
+A.ttg-button:link, A.ttg-button:visited {
+  background: #EBEBEB;
+  color: #31401D;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding: 0.5em 0.7em;
+  display: inline-block;
+}
+
+A.ttg-button:hover, A.ttg-button:active {
+  background: #8EC641;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+A.ttg-button:before {
+  font-family: FontAwesome;
+  content: '\f067';
+  color: #8EC641;
+  font-size: 70%;
+  font-weight: normal;
+  vertical-align: top;
+  margin: 0.5em 0.3em 0 0;
+}
+
+A.ttg-button:hover:before {
+  color: #31401D;
+}
+
 H1 {
   font-size: 1.7em;
 }
@@ -60,11 +97,27 @@ H2 {
 .header {
   height: 850px;
   background-image: url(../images/banner-home.jpg);
+  background-position: center center;
   background-size: cover;
 }
 
-.logo {
+.menu.sticky {
+  position: fixed;
+  width: 100%;
+  background: #161A10;
+  padding: 0.5em 0 0.2em;
+  line-height: 1em;
+  -webkit-box-shadow: 0 4px 9px 0 rgba(0,0,0,0.65);
+  -moz-box-shadow: 0 4px 9px 0 rgba(0,0,0,0.65);
+  box-shadow: 0 4px 9px 0 rgba(0,0,0,0.65);
+}
+
+#logo {
   margin: 17px 0 0 2%;
+}
+
+.menu.sticky #logo {
+  margin: 0;
 }
 
 #menu-toggle,
@@ -80,6 +133,10 @@ H2 {
   float: right;
   font-family: 'Oswald', sans-serif;
   padding-top: 3.5em;
+}
+
+.menu.sticky #main-menu {
+  padding-top: 1.5em;
 }
 
 #main-menu UL {
@@ -126,8 +183,18 @@ H2 {
 #main-menu UL LI:hover UL {
   display: block;
   position: absolute;
-  top: 2em;
+  top: 1.9em;
   left: 0;
+}
+
+.menu.sticky #main-menu UL LI:hover UL {
+  top: 1.5em;
+  left: -0.8em;
+  background: #161A10;
+  padding: 0.2em 0.8em 0.5em;
+  -webkit-box-shadow: 0 4px 9px 0 rgba(0,0,0,0.65);
+  -moz-box-shadow: 0 4px 9px 0 rgba(0,0,0,0.65);
+  box-shadow: 0 4px 9px 0 rgba(0,0,0,0.65);
 }
 
 #main-menu UL LI UL LI {
@@ -153,10 +220,95 @@ H2 {
   color: #8EC641;
 }
 
+.banner-home {
+  color: #FFFFFF;
+  font-size: 111.11%;
+  box-sizing: border-box;
+  padding: 5.5em 0 0 11.2%;
+}
+
+.banner-home H1 {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 645%;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.9em;
+}
+
+.banner-home H1 SUP {
+  font-size: 55%;
+}
+
+.banner-home H2 {
+  margin: 1em 0 1.4em 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 140%;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+.banner-home-text {
+  width: 78%;
+  padding-bottom: 6em;
+}
+
+.banner-home A.ttg-button:link, .banner-home A.ttg-button:visited {
+  background: #8EC641;
+}
+
+.banner-home A.ttg-button:hover, .banner-home A.ttg-button:active {
+  background: #FFFFFF;
+  color: #8EC641;
+}
+
+.banner-home A.ttg-button:before { color: #FFFFFF; }
+.banner-home A.ttg-button:hover:before { color: #31401D; }
+
+.banner-home A.lm-button:link, .banner-home A.lm-button:visited {
+  color: #8EC641;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding: 0.5em 0.7em;
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.banner-home A.lm-button:hover, .banner-home A.lm-button:active {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.banner-home A.lm-button:before {
+  font-family: FontAwesome;
+  content: '\f107';
+  color: #FFFFFF;
+  vertical-align: top;
+  margin: 0.5em 0.3em 0 0;
+}
+
+.banner-home A.lm-button:hover:before {
+  color: #8EC641;
+}
+
 .sponsors {
   height: 136px;
   line-height: 136px;
   background: #F1F1F2;
+}
+
+.sponsors IMG {
+  vertical-align: middle;
+  margin-left: 7%;
+}
+
+.sponsors IMG:first-child {
+  margin-left: 0;
 }
 
 .prefooter {
@@ -226,9 +378,17 @@ H2 {
   padding: 5px;
   border-radius: 50%;
   border-top-right-radius: 0;
+  margin-left: 0.5em;
 }
 
 A.facebook:link, A.facebook:visited { background: #3B5B9B; }
+A.twitter:link, A.twitter:visited { background: #2CAADF; }
+A.youtube:link, A.youtube:visited { background: #E14E41; }
+A.instagram:link, A.instagram:visited { background: #517EA3; }
+
+.social A:hover, .social A:active {
+  background: #8EC641;
+}
 
 .footer {
   background: #161A10;
