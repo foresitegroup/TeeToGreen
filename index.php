@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $EventDate = strtotime("July 18, 2016");
 $EventLoc = "The Wisconsin Club";
 
@@ -31,6 +33,8 @@ $PageTitle = "";
     <script type="text/javascript">
       $(document).ready(function() {
         $("a[href^='http'], a[href$='.pdf']").not("[href*='" + window.location.host + "']").attr('target','_blank');
+
+        $('.mh').matchHeight();
 
         $(window).scroll(function () {
           if ($(this).scrollTop() > 131) {
@@ -65,36 +69,6 @@ $PageTitle = "";
           offset: '30%'
         });
 
-        var form = $('#contact-form');
-        var formMessages = $('#form-messages');
-        $(form).submit(function(event) {
-          event.preventDefault();
-
-          var formData = $(form).serialize();
-
-          $.ajax({
-            type: 'POST',
-            url: $(form).attr('action'),
-            data: formData
-          })
-          .done(function(response) {
-            // Set the message text.
-            $(formMessages).html(response);
-
-            // Clear the form.
-            $('#name').val('');
-            $('#phone').val('');
-          })
-          .fail(function(data) {
-            // Set the message text.
-            if (data.responseText !== '') {
-              $(formMessages).text(data.responseText);
-            } else {
-              $(formMessages).text('Oops! An error occured and your message could not be sent.');
-            }
-          });
-        });
-        
         $.jMaskGlobals.watchDataMask = true;
         
         window.sr = ScrollReveal();
@@ -256,7 +230,7 @@ $PageTitle = "";
       </div>
     </div>
 
-    <a id="next-story">READ NEXT STORY <i class="fa fa-arrow-right"></i></a>
+    <a id="next-story" class="arrow-link">READ NEXT STORY</a>
   </div>
 
   <div id="stats">
@@ -277,8 +251,43 @@ $PageTitle = "";
     * After three consecutive years of participation in The First Tee (national average percentages)
   </div>
 
-  <div class="site-width" style="outline: 1px solid red; margin: 3em auto;">
-    NEWS AND TWITTER GO HERE
+  <div class="news-twitter site-width">
+    <div class="three-fourth">
+      <h3>FEATURED NEWS</h3>
+
+      <div class="news">
+        MAY 30, 2016<br>
+        T2G ANNOUNCES MERCEDES BENZ SPORSORSHIP<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+      </div>
+    </div>
+
+    <div class="one-fourth last">
+      <span class="social-icon"><i class="fa fa-twitter"></i></span>
+      
+      <div class="twitter">
+        <a href="#" class="twitter-name">@TeeToGreen</a>
+
+        <script type="text/javascript" src="inc/twitterFetcher_min.js"></script>
+        <script>
+          var config1 = {
+            "id": '435921074492948480',
+            "domId": 'twitter-feed',
+            "maxTweets": 4,
+            "enableLinks": true,
+            "showTime": false,
+            "showUser": false,
+            "showRetweet": false,
+            "showInteraction": false
+          };
+          twitterFetcher.fetch(config1);
+        </script>
+
+        <div id="twitter-feed"></div>
+
+        <a href="#" class="arrow-link">Follow Us</a>
+      </div>
+    </div>
   </div>
 
   <div class="contact">
@@ -294,13 +303,66 @@ $PageTitle = "";
       </form>
       
       <div class="home-contact">
+        <script type="text/javascript">
+          $(document).ready(function() {
+            var form = $('#contact-form');
+            var formMessages = $('#contact-form-messages');
+            $(form).submit(function(event) {
+              event.preventDefault();
+              
+              function formValidation() {
+                if ($('#name').val() === '') { alert('Name required.'); $('#name').focus(); return false; }
+                if ($('#email').val() === '') { alert('Email required.'); $('#email').focus(); return false; }
+                if ($('#message').val() === '') { alert('Message required.'); $('#message').focus(); return false; }
+                return true;
+              }
+              
+              if (formValidation()) {
+                var formData = $(form).serialize();
+                formData += '&src=ajax';
+
+                $.ajax({
+                  type: 'POST',
+                  url: $(form).attr('action'),
+                  data: formData
+                })
+                .done(function(response) {
+                  $(formMessages).html(response);
+
+                  $('#name').val('');
+                  $('#phone').val('');
+                  $('#email').val('');
+                  $('#message').val('');
+                })
+                .fail(function(data) {
+                  if (data.responseText !== '') {
+                    $(formMessages).html(data.responseText);
+                  } else {
+                    $(formMessages).text('Oops! An error occured and your message could not be sent.');
+                  }
+                });
+              }
+            });
+          });
+        </script>
+
         <?php
         // Settings for randomizing form field names
         $ip = $_SERVER['REMOTE_ADDR'];
         $timestamp = time();
         $salt = "ForesiteGroupTeeToGreen";
         ?>
-        <div id="form-messages"></div>
+
+        <noscript>
+        <?php
+        $feedback = (!empty($_SESSION['feedback'])) ? $_SESSION['feedback'] : "";
+        unset($_SESSION['feedback']);
+        ?>
+        </noscript>
+        
+        <div id="contact-form-messages"><?php echo $feedback; ?></div>
+        <h2>Contact Us!</h2>
+        <div class="required">* Required</div>
         <form action="form-contact.php" method="POST" id="contact-form">
           <div>
             <div class="one-half">
@@ -312,6 +374,12 @@ $PageTitle = "";
             </div>
 
             <div style="clear: both;"></div><br>
+
+            <input type="text" name="<?php echo md5("email" . $ip . $salt . $timestamp); ?>" id="email" placeholder="* Email Address"><br>
+            <br>
+
+            <textarea name="<?php echo md5("message" . $ip . $salt . $timestamp); ?>" id="message" placeholder="* Message"></textarea><br>
+            <br>
 
             <input type="text" name="confirmationCAP" style="display: none;"> <?php // Non-displaying field as a sort of invisible CAPTCHA. ?>
 

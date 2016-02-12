@@ -57,7 +57,7 @@ HR {
 }
 
 A:link, A:visited {
-  color: #0000FF;
+  color: #8EC641;
   text-decoration: none;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -65,7 +65,7 @@ A:link, A:visited {
 }
 
 A:hover, A:active {
-  color: #FF0000;
+  color: #161A10;
   text-decoration: none;
 }
 
@@ -89,7 +89,7 @@ TEXTAREA {
   border: 0;
   box-sizing: border-box;
   width: 100%;
-  padding: 0.3em 0.8em;
+  padding: 0.1em 0.7em;
   background: #EBEBEB;
   color: #767676;
   font-family: 'Titillium Web', sans-serif;
@@ -102,6 +102,11 @@ TEXTAREA {
   overflow: auto; /* Good ol' IE */
 }
 
+TEXTAREA {
+  padding: 0.5em 0.7em;
+  height: 7.5em;
+}
+
 INPUT[type="text"]:focus,
 INPUT[type="email"]:focus,
 TEXTAREA:focus {
@@ -112,6 +117,10 @@ INPUT::-webkit-input-placeholder { color: #767676; text-transform: uppercase; op
 INPUT:-moz-placeholder { color: #767676; text-transform: uppercase; opacity: 1; } /* FF 4-18 */
 INPUT::-moz-placeholder { color: #767676; text-transform: uppercase; opacity: 1; } /* FF 19+ */
 INPUT:-ms-input-placeholder { color: #767676; text-transform: uppercase; opacity: 1; } /* IE 10+ */
+TEXTAREA::-webkit-input-placeholder { color: #767676; text-transform: uppercase; opacity: 1; }
+TEXTAREA:-moz-placeholder { color: #767676; text-transform: uppercase; opacity: 1; } /* FF 4-18 */
+TEXTAREA::-moz-placeholder { color: #767676; text-transform: uppercase; opacity: 1; } /* FF 19+ */
+TEXTAREA:-ms-input-placeholder { color: #767676; text-transform: uppercase; opacity: 1; } /* IE 10+ */
 
 INPUT:focus::-webkit-input-placeholder { color: transparent; }
 INPUT:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
@@ -224,6 +233,34 @@ A.ttg-button:before {
 
 A.ttg-button:hover:before {
   color: #31401D;
+}
+
+.arrow-link,
+.arrow-link:link,
+.arrow-link:visited {
+  color: #31401D;
+  font-family: 'oswaldmedium', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.arrow-link:after {
+  font-family: FontAwesome;
+  content: '\f061';
+  color: #8EC641;
+  font-size: 70%;
+  font-weight: normal;
+  vertical-align: 20%;
+  margin-left: 1em;
+}
+
+.arrow-link:hover,
+.arrow-link:active {
+  color: #8EC641;
+}
+
+.arrow-link:hover:after {
+  color: #464647;
 }
 
 .header {
@@ -665,28 +702,14 @@ A.ttg-button:hover:before {
   box-shadow: 0 0 25px 2px rgba(0,0,0,0.3);
 }
 
-.then-now #next-story {
-  color: #31401D;
-  cursor: pointer;
+.then-now .arrow-link {
   font-family: 'oswalddemibold', sans-serif;
-  font-size: 118.75%;
+  font-size: 19px;
+  cursor: pointer;
 }
 
-.then-now A#next-story:hover,
-.then-now A#next-story:active {
-  color: #8EC641;
-}
-
-.then-now #next-story .fa-arrow-right {
-  color: #8EC641;
-  font-size: 70%;
-  font-weight: normal;
-  vertical-align: 25%;
-  margin-left: 0.5em;
-}
-
-.then-now #next-story:hover .fa-arrow-right {
-  color: #464647;
+.then-now .arrow-link:after {
+  vertical-align: 15%;
 }
 
 #stats {
@@ -732,6 +755,71 @@ A.ttg-button:hover:before {
   margin: 2.1em auto 1.9em;
 }
 
+.news-twitter {
+  padding: 4em 0;
+}
+
+.news-twitter H3 {
+  color: #28341A;
+  font-family: 'oswaldmedium', sans-serif;
+  font-weight: normal;
+  font-size: 133.33%;
+  line-height: 1em;
+  margin: 0 0 1.5em;
+}
+
+.news-twitter .news {
+  border-right: 1px solid #EBEBEB;
+  box-sizing: border-box;
+  padding-right: 3%;
+}
+
+.news-twitter .social-icon {
+  background: #29341D;
+  display: block;
+  margin: 0 0 1.8em 0;
+}
+
+.news-twitter .twitter {
+  font-size: 94.44%;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+.news-twitter .twitter .twitter-name {
+  font-weight: 600;
+}
+
+.news-twitter .twitter #twitter-feed {
+  margin: 1em 0;
+}
+
+.news-twitter .twitter UL {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.news-twitter .twitter LI .tweet {
+  position: relative;
+  margin: 0 0 1em;
+  padding-bottom: 1em;
+}
+
+.news-twitter .twitter LI .tweet:before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: #161A10;
+  position: absolute;
+  top: -1em;
+  left: 0;
+}
+
+.news-twitter .twitter LI:first-child .tweet:before {
+  height: 0;
+}
+
 .contact {
   background: url(../images/contact-background.jpg) no-repeat center top;
   padding-top: 5em;
@@ -746,7 +834,7 @@ A.ttg-button:hover:before {
 }
 
 .contact .mailing-list {
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 
 .contact .mailing-list INPUT[type="text"] {
@@ -783,13 +871,30 @@ A.ttg-button:hover:before {
 }
 
 .contact .home-contact {
-  padding: 2.4em 5%;
+  padding: 0.5em 5% 2.5em;
   background: #28341A;
   color: #FFFFFF;
 }
 
-.contact .home-contact #form-messages {
+.contact .home-contact #contact-form-messages {
   height: 1.5em;
+  text-align: center;
+  color: #E14E41;
+  margin-bottom: 0.5em;
+}
+
+.contact .home-contact H2 {
+  font-family: 'oswaldmedium', sans-serif;
+  font-weight: normal;
+  font-size: 155.55%;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 1em;
+}
+
+.contact .home-contact .required {
+  font-size: 77.77%;
   margin-bottom: 0.5em;
 }
 
@@ -849,6 +954,7 @@ A.ttg-button:hover:before {
   transform: translateY(-50%);
 }
 
+.social-icon,
 .social A:link, .social A:visited {
   color: #FFFFFF;
   font-size: 90%;
