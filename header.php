@@ -3,6 +3,7 @@ session_start();
 
 if (!isset($TopDir)) $TopDir = "";
 
+date_default_timezone_set("America/Chicago");
 $GLOBALS['EventDate'] = strtotime("July 18, 2016");
 $GLOBALS['EventLoc'] = "The Wisconsin Club";
 ?>
@@ -43,6 +44,14 @@ $GLOBALS['EventLoc'] = "The Wisconsin Club";
           } else {
             $(".header-home .menu").removeClass("sticky");
             $(".header-home .menu #logo").attr("src", "<?php echo $TopDir; ?>images/logo.png");
+          }
+        });
+
+        $(window).on("load resize",function(e){
+          if ($(this).width() > 800) {
+            $('#sponsor-scroll.cycle-slideshow').cycle('destroy');
+          } else {
+            $('#sponsor-scroll.cycle-slideshow').cycle();
           }
         });
 
