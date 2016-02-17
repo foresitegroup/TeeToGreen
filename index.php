@@ -256,7 +256,6 @@ include "header.php";
     <div class="mailing-list">
       <input type="text" name="email" placeholder="Enter Your Email Address">
       <input type="submit" name="subscribe" value="SIGN UP">
-      <span style="color: red;">MAILCHIMP? NOT SET UP YET!</span>
     </div>
   </form>
   

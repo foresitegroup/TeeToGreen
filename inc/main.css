@@ -684,7 +684,7 @@ A.ttg-button:hover:before {
 .then-now > .one-half.last {
   font-family: 'oswaldmedium', sans-serif;
   font-size: 209%;
-  line-height: 1.5em;
+  line-height: 1em;
   text-transform: uppercase;
 }
 
@@ -692,6 +692,7 @@ A.ttg-button:hover:before {
 .then-now #story-pager A:visited {
   color: #D7D7D7;
   display: block;
+  margin-bottom: 0.7em;
 }
 
 .then-now #story-pager A:hover,
@@ -1444,4 +1445,77 @@ A.instagram:link, A.instagram:visited { background: #517EA3; }
     width: auto;
     margin-left: 7%;
   }
+
+  .core-values .three-fourth .two-third,
+  .core-values .three-fourth .one-third {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .core-values .three-fourth .one-third {
+    font-size: 150%;
+    padding-top: 1em;
+  }
+
+  #stats {
+    height: auto;
+    padding: 2em 0 2.5em;
+    box-sizing: content-box;
+    line-height: 1.4em;
+  }
+
+  #stats .site-width {
+    background: none;
+    margin-bottom: 2em;
+    line-height: 1.8em;
+  }
+
+  #stats .one-half {
+    float: none;
+    width: 100%;
+  }
+
+  #stats .one-half.last {
+    margin-top: 2em;
+    padding-top: 1.3em;
+    position: relative;
+  }
+
+  #stats .one-half.last:before {
+    content: "";
+    position: absolute;
+    top: -142px;
+    left: 50%;
+    width: 7px;
+    height: 286px;
+    background: url(../images/stats-border.png) no-repeat center top;
+    transform: rotate(90deg);
+  }
+
+  .news-twitter .news .news-col1,
+  .news-twitter .news .news-col2 {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .news-twitter .news .news-col1 .post {
+    margin-bottom: 1.7em;
+  }
+
+  .contact .mailing-list INPUT[type="text"] {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact .mailing-list INPUT[type="submit"] {
+    display: block;
+    margin: 0.8em auto 0;
+  }
+
+  .contact .mailing-list INPUT::-webkit-input-placeholder { font-size: 89%; }
+  .contact .mailing-list INPUT:-moz-placeholder { font-size: 89%; } /* FF 4-18 */
+  .contact .mailing-list INPUT::-moz-placeholder { font-size: 89%; } /* FF 19+ */
+  .contact .mailing-list INPUT:-ms-input-placeholder { font-size: 89%; } /* IE 10+ */
 }
