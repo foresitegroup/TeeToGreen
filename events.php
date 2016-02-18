@@ -2,45 +2,66 @@
 $PageTitle = "Events";
 
 include "header.php";
+
+include_once "inc/dbconfig.php";
+$now = time();
 ?>
   
-  <div class="subheader site-width">
-    <?php echo $PageTitle; ?>
+  <div class="subheader countdown site-width">
+    <?php
+    $result = $mysqli->query("SELECT * FROM events WHERE date >= $now ORDER BY date LIMIT 1");
+    if ($result->num_rows === 0) {
+      $title = "No event scheduled";
+      $date = $now;
+    } else {
+      $row = $result->fetch_array(MYSQLI_ASSOC);
+      $title = $row['title'];
+      $date = date("n/j/Y G:i:s", $row['date']);
+    }
+    ?>
+    <div class="countdown-text">
+      <div class="flex-width">
+        <h2>NEXT EVENT</h2><br>
+        <?php echo $title; ?>
+      </div>
+    </div>
+
+    <div id="countdown"></div>
+    <script type="text/javascript" src="inc/jquery.countdown.min.js"></script>
+    <script type="text/javascript">
+      $('#countdown').countdown('<?php echo $date; ?>', function(event) {
+        $(this).html(event.strftime('<div>%D<div>Days</div></div> <div class="sep">:</div> <div>%H<div>Hours</div></div> <div class="sep">:</div> <div>%M<div>Minutes</div></div> <div class="sep">:</div> <div>%S<div>Seconds</div></div>'));
+      });
+    </script>
+    <?php mysqli_free_result($result); ?>
   </div>
 </div>
 
-<div class="site-width">
-  This is the events page.<br>
-  <br>
+<?php
+$count = 1;
+$result = $mysqli->query("SELECT * FROM events WHERE date >= $now ORDER BY date ASC");
+while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+  if ($count > 1) echo "<hr class=\"event\">";
+  $image = ($row['image'] != "") ? $row['image'] : "event-generic.jpg";
+  ?>
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nulla feugiat, ornare elit eget, aliquam quam. Nam fringilla convallis fringilla. Donec libero massa, convallis in suscipit ut, rhoncus eget elit. Quisque et dolor quis quam ultricies accumsan eget sed ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas lobortis diam sagittis dolor commodo, vitae luctus dui varius. Quisque congue mauris et vestibulum blandit.<br>
-  <br>
+  <div class="site-width event">
+    <div class="image">
+      <img src="images/<?php echo $image; ?>" alt="">
+    </div>
 
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ultrices sem nec maximus maximus. Integer pellentesque magna vitae tortor consequat pulvinar. Nulla mauris erat, hendrerit id dui a, commodo placerat diam. Fusce consequat sollicitudin elementum. Duis mi nulla, elementum non urna eget, convallis viverra ante. Ut ut ex orci. Ut ac magna dui.<br>
-  <br>
+    <div class="info">
+      <h2><?php echo date("F j, Y", $row['date']); ?></h2>
+      <h3><?php echo $row['title']; ?></h3>
+      <?php echo $row['blurb']; ?>
+      <a href="#" class="ttg-button">View Event Details</a>
+    </div>
+  </div>
 
-  Nunc aliquet arcu nec pellentesque pulvinar. Sed laoreet leo massa, at ultrices eros placerat at. Quisque quis lectus eget metus suscipit fermentum gravida a dolor. Duis vulputate purus non pretium vulputate. Nullam et accumsan felis. Sed eget cursus nisl. Cras a mauris purus. Ut euismod metus leo, sit amet venenatis lectus pulvinar quis. Quisque elit ipsum, egestas ut tempor at, blandit ut leo. Morbi quis egestas nunc. Nam tristique lectus at metus luctus, id placerat arcu pellentesque. Maecenas tincidunt libero ut massa rutrum accumsan feugiat sed nunc. Pellentesque id ex tristique, scelerisque elit vel, mattis nunc. Morbi ac justo augue. Integer sed porttitor purus, sed suscipit augue.<br>
-  <br>
+  <?php
+  $count++;
+}
+mysqli_free_result($result);
+?>
 
-  Curabitur sed euismod augue, vitae malesuada mi. Sed nec felis condimentum, faucibus ante ac, pretium nunc. In rhoncus lacus elit, ac euismod ipsum sollicitudin at. Integer vestibulum ornare lorem, non dictum orci blandit sed. Duis vehicula posuere massa luctus lobortis. Donec volutpat a odio ac aliquet. Curabitur enim purus, faucibus nec massa at, fringilla ultricies elit. Vestibulum ligula diam, dictum et lobortis in, egestas non magna.<br>
-  <br>
-
-  Sed eu erat non sem interdum tempor. Donec placerat diam in auctor fermentum. Quisque consequat maximus leo non feugiat. Nunc quis felis ante. Nam sit amet lacus a nunc tincidunt varius nec non eros. Fusce sed aliquam tortor, sit amet laoreet augue. Vivamus vehicula ligula nec orci aliquet, porta consectetur nulla dapibus.<br>
-  <br>
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nulla feugiat, ornare elit eget, aliquam quam. Nam fringilla convallis fringilla. Donec libero massa, convallis in suscipit ut, rhoncus eget elit. Quisque et dolor quis quam ultricies accumsan eget sed ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas lobortis diam sagittis dolor commodo, vitae luctus dui varius. Quisque congue mauris et vestibulum blandit.<br>
-  <br>
-
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ultrices sem nec maximus maximus. Integer pellentesque magna vitae tortor consequat pulvinar. Nulla mauris erat, hendrerit id dui a, commodo placerat diam. Fusce consequat sollicitudin elementum. Duis mi nulla, elementum non urna eget, convallis viverra ante. Ut ut ex orci. Ut ac magna dui.<br>
-  <br>
-
-  Nunc aliquet arcu nec pellentesque pulvinar. Sed laoreet leo massa, at ultrices eros placerat at. Quisque quis lectus eget metus suscipit fermentum gravida a dolor. Duis vulputate purus non pretium vulputate. Nullam et accumsan felis. Sed eget cursus nisl. Cras a mauris purus. Ut euismod metus leo, sit amet venenatis lectus pulvinar quis. Quisque elit ipsum, egestas ut tempor at, blandit ut leo. Morbi quis egestas nunc. Nam tristique lectus at metus luctus, id placerat arcu pellentesque. Maecenas tincidunt libero ut massa rutrum accumsan feugiat sed nunc. Pellentesque id ex tristique, scelerisque elit vel, mattis nunc. Morbi ac justo augue. Integer sed porttitor purus, sed suscipit augue.<br>
-  <br>
-
-  Curabitur sed euismod augue, vitae malesuada mi. Sed nec felis condimentum, faucibus ante ac, pretium nunc. In rhoncus lacus elit, ac euismod ipsum sollicitudin at. Integer vestibulum ornare lorem, non dictum orci blandit sed. Duis vehicula posuere massa luctus lobortis. Donec volutpat a odio ac aliquet. Curabitur enim purus, faucibus nec massa at, fringilla ultricies elit. Vestibulum ligula diam, dictum et lobortis in, egestas non magna.<br>
-  <br>
-
-  Sed eu erat non sem interdum tempor. Donec placerat diam in auctor fermentum. Quisque consequat maximus leo non feugiat. Nunc quis felis ante. Nam sit amet lacus a nunc tincidunt varius nec non eros. Fusce sed aliquam tortor, sit amet laoreet augue. Vivamus vehicula ligula nec orci aliquet, porta consectetur nulla dapibus.
-</div>
-
-<?php include "footer.php"; ?>
+<?php $mysqli->close(); include "footer.php"; ?>

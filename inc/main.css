@@ -1187,6 +1187,126 @@ A.instagram:link, A.instagram:visited { background: #517EA3; }
   padding-bottom: 3em;
 }
 
+HR.event {
+  border: none 0;
+  border-top: 1px solid #D7D7D7; /* the border */
+  width: 100%;
+  margin: 5em auto;
+}
+
+.subheader.countdown {
+  padding: 3.1em 0 0.8em; /* Extra 2.3em on top for menu space */
+}
+
+.countdown-text {
+  float: left;
+  width: 42%;
+  padding: 0.2em 4% 0.2em 0;
+  box-sizing: border-box;
+  border-right: 1px solid #28341A;
+  text-align: left;
+  font-family: 'oswaldmedium', sans-serif;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 1em;
+  text-transform: none;
+  color: #FFFFFF;
+}
+
+.countdown-text .flex-width {
+  display: inline-block;
+}
+
+.countdown-text H2 {
+  font-family: 'oswalddemibold', sans-serif;
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 1em;
+  text-align: right;
+  color: #161A10;
+  margin: 0 0 0.2em;
+  display: inline-block;
+  width: 100%;
+}
+
+#countdown {
+  float: right;
+  width: 56%;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  font-size: 78px;
+  text-transform: none;
+  padding-top: 0.1em;
+}
+
+#countdown DIV {
+  color: #FFFFFF;
+  display: inline-block;
+  line-height: 0.8em;
+}
+
+#countdown DIV DIV {
+  font-weight: normal;
+  font-size: 17px;
+  display: block;
+  padding-top: 0.7em;
+}
+
+#countdown DIV.sep {
+  vertical-align: top;
+  color: #31401D;
+}
+
+.event .image {
+  float: left;
+  width: 38.4%;
+}
+
+.event .info {
+  float: right;
+  width: 55.4%;
+}
+
+.event .image IMG {
+  max-width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 0 25px 0 rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 25px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.3);
+}
+
+.event .info H2 {
+  font-family: 'oswaldmedium', sans-serif;
+  font-weight: normal;
+  font-size: 322.22%;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: #161A10;
+  margin: 0 0 0.5em;
+}
+
+.event .info H3 {
+  font-family: 'oswaldmedium', sans-serif;
+  font-weight: normal;
+  font-size: 277.77%;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: #8EC641;
+  margin: 0 0 0.25em;
+}
+
+.event .info A.ttg-button:link, .event .info A.ttg-button:visited {
+  background: transparent;
+  margin-top: 3em;
+  border: 4px solid #B7B7B8;
+}
+
+.event .info A.ttg-button:hover, .event .info .event .info A.ttg-button:active {
+  background: transparent;
+  color: #8EC641;
+  border: 4px solid #464647;
+}
+
 @media only screen and (max-width: 800px) {
   /* Small computer or landscape tablet */
   .site-width {

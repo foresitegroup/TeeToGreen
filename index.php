@@ -2,6 +2,8 @@
 $PageTitle = "";
 
 include "header.php";
+
+include_once "inc/dbconfig.php";
 ?>
 
   <div class="site-width">
@@ -67,32 +69,40 @@ include "header.php";
 
 <div class="home-event">
   <div class="site-width sr-bottom">
+    <?php
+    $result = $mysqli->query("SELECT * FROM events ORDER BY date DESC LIMIT 1");
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+    ?>
     <div class="col2">
       <h1>UPCOMING EVENT</h1>
-      <h2>HUNT'EM UP FOR CHARITY</h2>
+      <h2><?php echo $row['title']; ?></h2>
       <hr>
-      <h3>March 3<sup>rd</sup> 2016</h3>
-      <h4><span>LOCATION:</span> Highland Sportsman's Club</h4>
-      N3041 County Rd A, Cascade, WI 53011<br>
+      <h3><?php echo date("F j<\s\u\p>S</\s\u\p> Y", $row['date']); ?></h3>
+      <h4><span>LOCATION:</span> <?php echo $row['location']; ?></h4>
+      <?php echo $row['location_address']; ?><br>
       <a href="#" class="ttg-button">EVENT DETAILS</a>
     </div> <!-- END col2 -->
 
     <div class="col1">
-      <div class="event-image" style="background-image: url(images/event-hunt.jpg);"></div>
+      <div class="event-image" style="background-image: url(images/<?php echo $row['image']; ?>);"></div>
 
       <div class="event-blurb">
-        The Inaugural Hunt'em Up for Charity will be held at the Highlands Sportsman's Club on Thursday, March 3rd. Only 8 fields in the morning and 8 fields in the afternoon available, so get your team filled today!
+        <?php echo $row['blurb']; ?>
       </div>
-
-      <ul>
+      
+      <?php echo $row['schedule']; ?>
+      <!-- <ul>
         <li>MORNING HUNT: 9AM-12PM</li>
         <li>AFTERNOON HUNT: 1PM-4PM</li>
-      </ul>
+      </ul> -->
 
       <div class="event-schedule-details">
-        <strong>Hunt Includes:</strong> 5 Birds Per Hunter, Guide &amp; Dog, Food &amp; Beverage Following Hunt, Optional Gun Raffle
+        <?php echo $row['home_summary']; ?>
       </div>
     </div> <!-- END col1 -->
+    <?php
+    mysqli_free_result($result);
+    ?>
   </div> <!-- END site-width -->
 </div> <!-- END home-event -->
 
@@ -350,4 +360,4 @@ include "header.php";
 </div>
 </div>
 
-<?php include "footer.php"; ?>
+<?php $mysqli->close(); include "footer.php"; ?>
