@@ -10,8 +10,8 @@ if ($_POST['confirmationCAP'] == "") {
       $_POST[md5('message' . $_POST['ip'] . $salt . $_POST['timestamp'])] != ""
      )
   {
+    $Subject = (!empty($_POST[md5('subject' . $_POST['ip'] . $salt . $_POST['timestamp'])])) ? $_POST[md5('subject' . $_POST['ip'] . $salt . $_POST['timestamp'])] : "Contact From Tee To Green Website";
     $SendTo = "patmccurdymusic@gmail.com";
-    $Subject = "Contact From Tee To Green Website";
     $From = "From: Contact Form <contactform@tee-to-green.org>\r\n";
     $From .= "Reply-To: " . $_POST[md5('email' . $_POST['ip'] . $salt . $_POST['timestamp'])] . "\r\n";
 
@@ -43,6 +43,6 @@ if ($_POST['confirmationCAP'] == "") {
 
 if (empty($_REQUEST['src'])) {
   $_SESSION['feedback'] = $feedback;
-  header("Location: index.php#contact-form");
+  header("Location: " . $_POST['referrer'] . ".php#contact-form");
 }
 ?>

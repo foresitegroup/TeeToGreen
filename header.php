@@ -54,29 +54,31 @@ $GLOBALS['EventLoc'] = "The Wisconsin Club";
             $('#sponsor-scroll.cycle-slideshow').cycle();
           }
         });
-
-        var waypoint = new Waypoint({
-          element: document.getElementById('stats'),
-          handler: function() {
-            $(".count-up").map(function (i, el) {
-              var data = parseInt(this.dataset.n, 10);
-              var props = { "from": { "count": 0 }, "to": { "count": data } };
-              return $(props.from).animate(props.to, {
-                duration: 1000 * 3,
-                step: function (now, fx) {
-                  $(el).text(Math.ceil(now));
-                },
-                complete: function() {
-                  if (el.dataset.sym !== undefined) {
-                    el.textContent = el.textContent.concat(el.dataset.sym)
+        
+        if (document.getElementById('stats')) {
+          var waypoint = new Waypoint({
+            element: document.getElementById('stats'),
+            handler: function() {
+              $(".count-up").map(function (i, el) {
+                var data = parseInt(this.dataset.n, 10);
+                var props = { "from": { "count": 0 }, "to": { "count": data } };
+                return $(props.from).animate(props.to, {
+                  duration: 1000 * 3,
+                  step: function (now, fx) {
+                    $(el).text(Math.ceil(now));
+                  },
+                  complete: function() {
+                    if (el.dataset.sym !== undefined) {
+                      el.textContent = el.textContent.concat(el.dataset.sym)
+                    }
                   }
-                }
-              }).promise();
-            }).toArray();
-            waypoint.disable();
-          },
-          offset: '30%'
-        });
+                }).promise();
+              }).toArray();
+              waypoint.disable();
+            },
+            offset: '30%'
+          });
+        }
 
         $.jMaskGlobals.watchDataMask = true;
         
