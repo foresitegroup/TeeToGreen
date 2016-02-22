@@ -91,10 +91,6 @@ include_once "inc/dbconfig.php";
       </div>
       
       <?php echo $row['schedule']; ?>
-      <!-- <ul>
-        <li>MORNING HUNT: 9AM-12PM</li>
-        <li>AFTERNOON HUNT: 1PM-4PM</li>
-      </ul> -->
 
       <div class="event-schedule-details">
         <?php echo $row['home_summary']; ?>

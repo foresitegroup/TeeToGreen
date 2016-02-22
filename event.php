@@ -1,68 +1,65 @@
 <?php
-$PageTitle = "Events";
+include_once "inc/dbconfig.php";
+
+$result = $mysqli->query("SELECT * FROM events WHERE id = " . $_SERVER['QUERY_STRING']);
+$row = $result->fetch_array(MYSQLI_ASSOC);
+
+$PageTitle = $row['title'];
 
 include "header.php";
-
-include_once "inc/dbconfig.php";
-$now = time();
 ?>
-  
-  <div class="subheader countdown site-width">
-    <?php
-    $result = $mysqli->query("SELECT * FROM events WHERE date >= $now ORDER BY date LIMIT 1");
-    if ($result->num_rows === 0) {
-      $title = "No event scheduled";
-      $date = $now;
-    } else {
-      $row = $result->fetch_array(MYSQLI_ASSOC);
-      $title = $row['title'];
-      $date = date("n/j/Y G:i:s", $row['date']);
-    }
-    ?>
+
+  <div class="subheader countdown single-event site-width">
     <div class="countdown-text">
-      <div class="flex-width">
-        <h2>NEXT EVENT</h2><br>
-        <?php echo $title; ?>
-      </div>
+      <h2><?php echo date("m.d.Y", $row['date']); ?></h2>
     </div>
 
     <div id="countdown"></div>
     <script type="text/javascript" src="inc/jquery.countdown.min.js"></script>
     <script type="text/javascript">
-      $('#countdown').countdown('<?php echo $date; ?>', function(event) {
+      $('#countdown').countdown('<?php echo date("n/j/Y G:i:s", $row['date']); ?>', function(event) {
         $(this).html(event.strftime('<div>%D<div>Days</div></div> <div class="sep">:</div> <div>%H<div>Hours</div></div> <div class="sep">:</div> <div>%M<div>Minutes</div></div> <div class="sep">:</div> <div>%S<div>Seconds</div></div>'));
       });
     </script>
-    <?php mysqli_free_result($result); ?>
   </div>
 </div>
 
-<?php
-$count = 1;
-$result = $mysqli->query("SELECT * FROM events WHERE date >= $now ORDER BY date ASC");
-while($row = $result->fetch_array(MYSQLI_ASSOC)) {
-  if ($count > 1) echo "<hr class=\"event\">";
-  $image = ($row['image'] != "") ? $row['image'] : "event-generic.jpg";
-  ?>
+<?php $image = ($row['image'] != "") ? $row['image'] : "event-generic.jpg"; ?>
+<div class="event-banner" style="background-image: url(images/<?php echo $image; ?>);">
+  <div class="overlay">
+    <div class="site-width">
+      <h3><?php //echo date("F j, Y", $row['date']); ?>SEPTEMBER 19, 2016</h3>
+      <h2><?php echo $row['title']; ?></h2>
+      <?php if ($row['location'] != "") { ?>
+      <img src="images/pin-gray.png" alt="">
+      <h4><span style="color: #8EC641;">Location:</span> <?php echo $row['location']; ?></h4>
+      <?php } ?>
+      <?php if ($row['location_address'] != "") echo $row['location_address']; ?>
+    </div> <!-- END site-width -->
+  </div> <!-- END overlay -->
+</div> <!-- END event-banner -->
 
-  <div class="site-width event">
-    <div class="image">
-      <div class="image-background" style="background-image: url(images/<?php echo $image; ?>);"></div>
-    </div>
+<div class="site-width event">
+  <?php if ($row['blurb'] != "") { ?>
+  <div class="blurb">
+    <?php echo $row['blurb']; ?>
+  </div>
+  <?php } ?>
 
-    <div class="info">
-      <h2><?php echo date("F j, Y", $row['date']); ?></h2>
-      <h3><?php echo $row['title']; ?></h3>
-      <?php echo $row['blurb']; ?><br>
-      <a href="event.php?<?php echo $row['id']; ?>" class="ttg-button">View Event Details</a>
-    </div>
+  <div class="one-half">
+    <h3>EVENT SCHEDULE</h3>
+    <?php echo $row['schedule']; ?>
   </div>
 
-  <?php
-  $count++;
-}
-mysqli_free_result($result);
-?>
+  <div class="one-half last">
+    <h3>REGISTRATION</h3>
+    <?php echo $row['registration']; ?>
+  </div>
+
+  <div class="moreinfo">For more information regarding <?php echo $row['title']; ?> please contact <strong>Courtney</strong> at: <strong><?php email("cbuchach@outlook.com"); ?></strong></div>
+</div>
+
+<?php mysqli_free_result($result); ?>
 
 <div class="event-sponsor">
   <div class="site-width">
@@ -84,14 +81,14 @@ mysqli_free_result($result);
           var formMessages = $('#contact-form-messages');
           $(form).submit(function(event) {
             event.preventDefault();
-            
+
             function formValidation() {
               if ($('#name').val() === '') { alert('Name required.'); $('#name').focus(); return false; }
               if ($('#email').val() === '') { alert('Email required.'); $('#email').focus(); return false; }
               if ($('#message').val() === '') { alert('Message required.'); $('#message').focus(); return false; }
               return true;
             }
-            
+
             if (formValidation()) {
               var formData = $(form).serialize();
               formData += '&src=ajax';
@@ -135,7 +132,7 @@ mysqli_free_result($result);
       unset($_SESSION['feedback']);
       ?>
       </noscript>
-      
+
       <div id="contact-form-messages"><?php echo $feedback; ?></div>
       <h2>Contact Us Today!</h2>
       <div class="required">* Required</div>
