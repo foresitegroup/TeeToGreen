@@ -82,7 +82,7 @@ function email($address, $name="") {
               }).toArray();
               waypoint.disable();
             },
-            offset: '30%'
+            offset: '70%'
           });
         }
 
@@ -100,7 +100,7 @@ function email($address, $name="") {
   <div class="header<?php if ($PageTitle == "") echo "-home"; ?>">
     <div class="menu">
       <div class="site-width">
-        <a href="."><img src="<?php echo $TopDir; ?>images/logo-small.png" alt="Tee To Green" id="logo"></a>
+        <a href="<?php echo $TopDir; ?>."><img src="<?php echo $TopDir; ?>images/logo-small.png" alt="Tee To Green" id="logo"></a>
 
         <label for="show-menu" id="menu-toggle"><i class="fa fa-bars"></i></label>
         <input type="checkbox" id="show-menu" role="button">

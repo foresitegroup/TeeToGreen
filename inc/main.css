@@ -202,6 +202,16 @@ INPUT[type="submit"]:hover {
   margin-right: 0;
 }
 
+.center {
+  text-align: center;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 0 25px 0 rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 25px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.3);
+}
+
 A.ttg-button:link, A.ttg-button:visited {
   background: #EBEBEB;
   color: #31401D;
@@ -261,6 +271,18 @@ A.ttg-button:hover:before {
 
 .arrow-link:hover:after {
   color: #464647;
+}
+
+A.down:link, A.down:visited {
+  font-family: 'oswaldmedium', sans-serif;
+}
+
+A.down:before {
+  font-family: FontAwesome;
+  content: "\f078";
+  font-size: 50%;
+  vertical-align: 15%;
+  margin-right: 0.5em;
 }
 
 .header-home {
@@ -412,6 +434,7 @@ A.ttg-button:hover:before {
 .subheader SUP {
   text-transform: none;
   font-size: 50%;
+  line-height: 1em;
 }
 
 .subheader .fa-circle-o {
@@ -1091,6 +1114,11 @@ A.ttg-button:hover:before {
   text-align: right;
 }
 
+.tee-to-green .one-third IMG {
+  max-width: 100%;
+  height: auto;
+}
+
 .event-sponsor .one-third H2 {
   font-family: 'oswaldmedium', sans-serif;
   font-weight: normal;
@@ -1120,6 +1148,42 @@ A.ttg-button:hover:before {
   color: #FFFFFF;
   font-size: 111.11%;
   line-height: 1.5em;
+}
+
+.tee-to-green .two-third UL {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.tee-to-green .two-third UL LI {
+  line-height: 1.3em;
+  padding: 0 0 0.4em 0.8em;
+  position: relative;
+}
+
+.tee-to-green .two-third UL LI:before {
+  font-family: FontAwesome;
+  content: "\f111";
+  font-size: 40%;
+  color: #161A10;
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+}
+
+.tee-to-green .two-third A.down:link,
+.tee-to-green .two-third A.down:visited {
+  color: #FFFFFF;
+}
+
+.tee-to-green .two-third A.down:before {
+  color: #161A10;
+}
+
+.tee-to-green .two-third A.down:hover,
+.tee-to-green .two-third A.down:active {
+  color: #161A10;
 }
 
 .prefooter {
@@ -1545,6 +1609,57 @@ HR.event {
   border: 4px solid #464647;
 }
 
+.ttg .one-fourth {
+  line-height: 1.8em;
+}
+
+.ttg .three-fourth {
+  font-size: 116.66%;
+  line-height: 2em;
+  color: #363636;
+  margin-bottom: 4em;
+}
+
+.ttg .nine {
+  font-family: 'oswaldmedium', sans-serif;
+  font-size: 150%;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  color: #161A10;
+  margin-bottom: 4em;
+}
+
+.ttg .one-half.center {
+  padding-top: 3em;
+}
+
+.ttg .one-half {
+  margin-bottom: 4em;
+}
+
+.ttg .one-half IMG {
+  max-width: 100%;
+}
+
+.ttg .pull {
+  font-family: 'oswaldmedium', sans-serif;
+  font-size: 32px;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #898989;
+  padding-top: 2.25em;
+}
+
+.ttg H4 {
+  font-family: 'oswaldmedium', sans-serif;
+  font-size: 24px;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: #161A10;
+  margin: 0 0 0.5em;
+}
+
 .tee-to-green-links {
   margin-top: 4em;
   background: #161A10;
@@ -1574,6 +1689,13 @@ HR.event {
   /* Small computer or landscape tablet */
   .site-width {
     width: 96%;
+  }
+
+  .subheader .fa-circle-o {
+    display: block;
+    visibility: hidden;
+    font-size: 0.1em;
+    vertical-align: 0;
   }
 
   .banner-home {
@@ -1659,6 +1781,18 @@ HR.event {
   .event UL LI {
     font-size: 165%;
   }
+
+  .ttg .nine {
+    font-size: 145%;
+  }
+
+  .ttg .one-half.center {
+    padding-top: 1em;
+  }
+
+  .ttg .pull {
+    padding-top: 0.4em;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1733,13 +1867,16 @@ HR.event {
     margin-bottom: 0;
   }
 
-  .event-sponsor .site-width {
+  .event-sponsor .site-width,
+  .tee-to-green .site-width {
     width: 100%;
     padding: 3em 0 0;
   }
 
   .event-sponsor .one-third,
-  .event-sponsor .two-third {
+  .event-sponsor .two-third,
+  .tee-to-green .one-third,
+  .tee-to-green .two-third {
     float: none;
     width: 100%;
     box-sizing: border-box;
@@ -1748,7 +1885,13 @@ HR.event {
     background: #1F2717;
   }
 
-  .event-sponsor .one-third {
+  .tee-to-green .one-third,
+  .tee-to-green .two-third {
+    background: #0555A2;
+  }
+
+  .event-sponsor .one-third,
+  .tee-to-green .one-third {
     text-align: center;
     padding-bottom: 1em;
   }
@@ -1762,7 +1905,8 @@ HR.event {
     font-size: 100%;
   }
 
-  .event-sponsor .contact {
+  .event-sponsor .contact,
+  .tee-to-green .contact {
     width: 96%;
     box-sizing: border-box;
     margin: 3em auto 0;
@@ -1854,6 +1998,27 @@ HR.event {
 
   .event .info A.ttg-button:link, .event .info A.ttg-button:visited {
     margin-top: 1.5em;
+  }
+
+  .ttg .one-fourth,
+  .ttg .three-fourth,
+  .ttg .one-half {
+    float: none;
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+
+  .ttg .nine {
+    font-size: 150%;
+  }
+
+  .ttg .one-half.center,
+  .ttg .pull {
+    padding-top: 0;
+  }
+
+  .ttg H4 {
+    margin: 0;
   }
 }
 
@@ -2050,5 +2215,10 @@ HR.event {
 
   .event H3 {
     font-size: 300%;
+  }
+
+  .tee-to-green-links A.ttg-button:link,
+  .tee-to-green-links A.ttg-button:visited {
+    margin: 0.5em 1.5em;
   }
 }

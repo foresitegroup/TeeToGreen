@@ -3,7 +3,7 @@ $PageTitle = "Tee To Green";
 
 include "header.php";
 ?>
-  
+
   <div class="subheader site-width">
     TEE TO GREEN EVENT <i class="fa fa-circle-o"></i>
     <?php echo date("F j<\s\u\p>S</\s\u\p> Y", $GLOBALS['EventDate']); ?> <i class="fa fa-circle-o"></i>
@@ -11,8 +11,64 @@ include "header.php";
   </div>
 </div>
 
-<div class="site-width">
-  TEE TO GREEN EVENT INFO HERE
+<div class="site-width ttg">
+  <div class="three-fourth">
+    <strong>The Tee To Green Golf Classic</strong> is an event that exists through The First Tee of Southeast Wisconsin to impact the lives of young people by providing learning facilities and educational programs that promote character development and life-enhancing values through the game of golf. The First Tee Life Skills experience teaches participants a set of skills to allow them to face challenges at home, school and play in a constructive manner. The goal is for participants to internalize the Nine Core Values, which are at the heart of The First Tee mission. At The First Tee of Southeast Wisconsin golf and life lessons are seamlessly integrated into each class.
+  </div>
+
+  <div class="one-fourth last nine">
+    Honesty<br>
+    Integrity<br>
+    Sportsmanship<br>
+    Respect<br>
+    Confidence<br>
+    Responsibility<br>
+    Perseverance<br>
+    Courtesy<br>
+    Judgment
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div class="one-half center">
+    <img src="images/logo-large.png" alt="Tee To Green">
+  </div>
+
+  <div class="one-half last">
+    <img src="images/tee-to-green1.jpg" alt="" class="shadow">
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div class="one-half">
+    <img src="images/tee-to-green2.jpg" alt="" class="shadow">
+  </div>
+
+  <div class="one-half last pull">
+     In addition to learning fundamentals of the golf swing and the game, a sample of life skills lessons include:
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div class="one-fourth">
+    <h4>INTERPERSONAL SKILLS</h4>
+    Proper introduction when meeting someone new and how to effectively communicate with others.
+  </div>
+
+  <div class="one-fourth">
+    <h4>SELF MANAGMENT</h4>
+    Techniques for managing thoughts and emotions.
+  </div>
+
+  <div class="one-fourth">
+    <h4>GOAL SETTING</h4>
+    Setting attainable goals to reach desired dreams.
+  </div>
+
+  <div class="one-fourth last">
+    <h4>RESILIENCY SKILLS</h4>
+    Strategies to adapt to, manage and overcome challenges.
+  </div>
 </div>
 
 <div class="tee-to-green-links">
@@ -23,11 +79,23 @@ include "header.php";
 <div class="tee-to-green">
   <div class="site-width">
     <div class="one-third">
-      AMBASSADOR CLUB LOGO HERE
+      <img src="images/ambassadors-club.png" alt="Ambassadors Club">
     </div>
 
     <div class="two-third last">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      In 2015, we created a new Foundation that will oversee The First Tee of Southeast Wisconsin! We have changed the name to reflect our expansion of programming throughout the area. We are working with friends in Racine, Milwaukee, and Ozaukee County throughout the upcoming year and plan to be in every county in the southeast portion of the state within five years.<br>
+      <br>
+
+      <strong>Ambassador Club Membership Benefits</strong>
+      <ul>
+        <li>Name Recognition Ambassador's Plaque in The Golf House Office</li>
+        <li>Official Ambassador's Club pin</li>
+        <li>Invite to the End of Year Annual Review</li>
+        <li>Name Recognition on our official event website</li>
+      </ul>
+      <br>
+
+      <a href="#" class="down">DOWNLOAD FORM</a>
     </div>
 
     <div style="clear: both;"></div>
@@ -39,14 +107,14 @@ include "header.php";
           var formMessages = $('#contact-form-messages');
           $(form).submit(function(event) {
             event.preventDefault();
-            
+
             function formValidation() {
               if ($('#name').val() === '') { alert('Name required.'); $('#name').focus(); return false; }
               if ($('#email').val() === '') { alert('Email required.'); $('#email').focus(); return false; }
               if ($('#message').val() === '') { alert('Message required.'); $('#message').focus(); return false; }
               return true;
             }
-            
+
             if (formValidation()) {
               var formData = $(form).serialize();
               formData += '&src=ajax';
@@ -90,7 +158,7 @@ include "header.php";
       unset($_SESSION['feedback']);
       ?>
       </noscript>
-      
+
       <div id="contact-form-messages"><?php echo $feedback; ?></div>
       <h2>Interested in becoming a member?</h2>
       <div class="required">* Required</div>

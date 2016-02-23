@@ -50,7 +50,7 @@ include_once "inc/dbconfig.php";
       <strong>The First Tee of Southeast Wisconsin</strong> exists to impact the lives of young people throughout Southeastern Wisconsin by providing learning facilities and educational programs that promote character development and life-enhancing values through the game of golf. The First Tee Life Skills experience teaches participants a set of skills to allow them to face challenges at home, school and play in a constructive manner. The goal is for participants to internalize the Nine Core Values, which are at the heart of The First Tee mission.<br>
       <br>
 
-      <a href="#" class="ttg-button">Learn More</a>
+      <a href="tee-to-green.php" class="ttg-button">Learn More</a>
     </div> <!-- END two-third -->
 
     <div class="one-third last">
@@ -80,7 +80,7 @@ include_once "inc/dbconfig.php";
       <h3><?php echo date("F j<\s\u\p>S</\s\u\p> Y", $row['date']); ?></h3>
       <h4><span>LOCATION:</span> <?php echo $row['location']; ?></h4>
       <?php echo $row['location_address']; ?><br>
-      <a href="#" class="ttg-button">EVENT DETAILS</a>
+      <a href="event.php?<?php echo $row['id']; ?>" class="ttg-button">EVENT DETAILS</a>
     </div> <!-- END col2 -->
 
     <div class="col1">

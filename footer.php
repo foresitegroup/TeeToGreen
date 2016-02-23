@@ -1,5 +1,5 @@
   <div class="site-width prefooter">
-    <a href="."><img src="<?php echo $TopDir; ?>images/logo-footer.png" alt="Tee To Green" id="logo-footer"></a>
+    <a href="<?php echo $TopDir; ?>."><img src="<?php echo $TopDir; ?>images/logo-footer.png" alt="Tee To Green" id="logo-footer"></a>
 
     <div id="footer-menu"><?php include "menu.php"; ?></div>
 

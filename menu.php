@@ -1,5 +1,5 @@
 <ul>
-  <li><a href="tee-to-green.php">TEE TO GREEN</a></li>
-  <li><a href="events.php">EVENTS</a></li>
-  <li><a href="news">NEWS</a></li>
+  <li><a href="<?php echo $TopDir; ?>tee-to-green.php">TEE TO GREEN</a></li>
+  <li><a href="<?php echo $TopDir; ?>events.php">EVENTS</a></li>
+  <li><a href="<?php echo $TopDir; ?>news">NEWS</a></li>
 </ul>
