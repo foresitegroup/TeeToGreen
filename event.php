@@ -171,4 +171,4 @@ include "header.php";
   </div> <!-- END sitewidth -->
 </div> <!-- END event-sponsor -->
 
-<?php $mysqli->close(); include "footer.php"; ?>
+<?php include "footer.php"; ?>

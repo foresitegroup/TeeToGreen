@@ -358,4 +358,4 @@ include_once "inc/dbconfig.php";
   </div> <!-- END site-width -->
 </div> <!-- END home-contact -->
 
-<?php $mysqli->close(); include "footer.php"; ?>
+<?php include "footer.php"; ?>

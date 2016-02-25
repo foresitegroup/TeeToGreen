@@ -1,0 +1,49 @@
+.login INPUT[type="text"],
+.login INPUT[type="password"] {
+  width: 30%;
+}
+
+INPUT[type="text"]:focus,
+INPUT[type="password"]:focus,
+TEXTAREA:focus {
+  outline: 1px solid #8EC641;
+}
+
+.login INPUT[type="submit"] {
+  display: inline-block;
+  padding: 0.7em 1em;
+  position: relative;
+  top: -0.05em;
+}
+
+.one-half H2 {
+  margin-top: 0;
+}
+
+.edit-icons {
+  width: auto;
+}
+
+.fa-trash,
+A:link .fa-trash,
+A:visited .fa-trash {
+  color: #252525;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+
+.fa-pencil,
+A:link .fa-pencil,
+A:visited .fa-pencil {
+  color: #F1D06B;
+  font-size: 1.5em;
+}
+
+A:hover .fa-trash, A:active .fa-trash,
+A:hover .fa-pencil, A:active .fa-pencil {
+  color: #959595;
+}
+
+.one-half FORM {
+  width: 80%;
+}

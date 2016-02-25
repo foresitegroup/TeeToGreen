@@ -174,4 +174,4 @@ mysqli_free_result($result);
   </div> <!-- END sitewidth -->
 </div> <!-- END event-sponsor -->
 
-<?php $mysqli->close(); include "footer.php"; ?>
+<?php include "footer.php"; ?>

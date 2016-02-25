@@ -4,8 +4,13 @@ session_start();
 if (!isset($TopDir)) $TopDir = "";
 
 date_default_timezone_set("America/Chicago");
-$GLOBALS['EventDate'] = strtotime("July 18, 2016");
-$GLOBALS['EventLoc'] = "The Wisconsin Club";
+
+include_once "inc/dbconfig.php";
+$eresult = $mysqli->query("SELECT * FROM theevent WHERE id = 1");
+$erow = $eresult->fetch_array(MYSQLI_ASSOC);
+$GLOBALS['EventDate'] = $erow['eventdate'];
+$GLOBALS['EventLoc'] = $erow['eventloc'];
+mysqli_free_result($eresult);
 
 function email($address, $name="") {
   for ($i = 0; $i < strlen($address); $i++) { $email .= (rand(0, 1) == 0) ? "&#" . ord(substr($address, $i)) . ";" : substr($address, $i, 1); }
