@@ -127,11 +127,9 @@ include "header.php";
               .done(function(response) {
                 $(formMessages).html(response);
 
-                $('#name').val('');
-                $('#phone').val('');
-                $('#email').val('');
-                $('#subject').val('');
-                $('#message').val('');
+                $(form).find('input:text, textarea, select').val('');
+                $('#email').val(''); // Grrr!
+                $(form).find('input:radio, input:checked').removeAttr('checked').removeAttr('selected');
               })
               .fail(function(data) {
                 if (data.responseText !== '') {
@@ -183,7 +181,7 @@ include "header.php";
           <textarea name="<?php echo md5("message" . $ip . $salt . $timestamp); ?>" id="message" placeholder="* Message"></textarea><br>
           <br>
 
-          <input type="hidden" name="referrer" value="tee-to-green">
+          <input type="hidden" name="referrer" value="tee-to-green.php">
 
           <input type="text" name="confirmationCAP" style="display: none;"> <?php // Non-displaying field as a sort of invisible CAPTCHA. ?>
 

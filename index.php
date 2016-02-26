@@ -292,10 +292,9 @@ include_once "inc/dbconfig.php";
               .done(function(response) {
                 $(formMessages).html(response);
 
-                $('#name').val('');
-                $('#phone').val('');
-                $('#email').val('');
-                $('#message').val('');
+                $(form).find('input:text, textarea, select').val('');
+                $('#email').val(''); // Grrr!
+                $(form).find('input:radio, input:checked').removeAttr('checked').removeAttr('selected');
               })
               .fail(function(data) {
                 if (data.responseText !== '') {
@@ -344,7 +343,7 @@ include_once "inc/dbconfig.php";
           <textarea name="<?php echo md5("message" . $ip . $salt . $timestamp); ?>" id="message" placeholder="* Message"></textarea><br>
           <br>
 
-          <input type="hidden" name="referrer" value="index">
+          <input type="hidden" name="referrer" value="index.php">
 
           <input type="text" name="confirmationCAP" style="display: none;"> <?php // Non-displaying field as a sort of invisible CAPTCHA. ?>
 

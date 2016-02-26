@@ -19,6 +19,8 @@ if ($_POST['confirmationCAP'] == "") {
 
     if (!empty($_POST[md5('phone' . $_POST['ip'] . $salt . $_POST['timestamp'])])) $Message .= "\n" . $_POST[md5('phone' . $_POST['ip'] . $salt . $_POST['timestamp'])];
 
+    if (!empty($_POST['interest'])) $Message .= "\nInterested in " . $_POST['interest'];
+
     $Message .= "\n" . $_POST[md5('message' . $_POST['ip'] . $salt . $_POST['timestamp'])];
 
     $Message = stripslashes($Message);
@@ -43,6 +45,6 @@ if ($_POST['confirmationCAP'] == "") {
 
 if (empty($_REQUEST['src'])) {
   $_SESSION['feedback'] = $feedback;
-  header("Location: " . $_POST['referrer'] . ".php#contact-form");
+  header("Location: " . $_POST['referrer'] . "#contact-form");
 }
 ?>

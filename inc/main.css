@@ -1045,6 +1045,15 @@ A.down:before {
   color: #FFFFFF;
 }
 
+.contact-page {
+  background: #1F2717;
+}
+
+.contact-page .contact {
+  padding: 1.5em 5% 3.5em;
+  background: transparent;
+}
+
 .partners-form .contact,
 .event-sponsor .contact {
   margin-top: 5.5em;
@@ -1076,6 +1085,11 @@ A.down:before {
 .contact .required {
   font-size: 77.77%;
   margin-bottom: 0.5em;
+}
+
+.contact-page .contact .required {
+  text-align: center;
+  margin-bottom: 2.5em;
 }
 
 .event-sponsor {
@@ -1158,6 +1172,52 @@ A.down:before {
   color: #FFFFFF;
   font-size: 111.11%;
   line-height: 1.5em;
+}
+
+.contact .radio {
+  text-align: center;
+}
+
+.contact .radio H4 {
+  margin: 0;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 1em;
+  color: #8EC641;
+  position: relative;
+  top: 1px;
+}
+
+.contact .radio LABEL {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-right: 1.5em;
+  margin-left: 2em;
+}
+
+.contact .radio INPUT[type=radio] {
+  display: none;
+}
+
+.contact .radio LABEL:after {
+  content: "";
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  position: absolute;
+  right: 0;
+  bottom: 0.25em;
+  background: #77A43C;
+  border-radius: 8px;
+}
+
+.contact .radio input[type=radio]:checked + label:after {
+  background: #22291B;
+  -webkit-box-shadow:inset 0px 0px 0px 3px #77A43C;
+  -moz-box-shadow:inset 0px 0px 0px 3px #77A43C;
+  box-shadow:inset 0px 0px 0px 3px #77A43C;
 }
 
 .tee-to-green .two-third UL {
@@ -1553,6 +1613,26 @@ HR.event {
   padding-bottom: 0;
 }
 
+.event-sponsors {
+  margin-top: 5em;
+  background: #EBEBEB;
+  padding: 3em 0;
+}
+
+.event-sponsors .site-width {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-sponsors .site-width IMG {
+  max-height: 90px;
+  width: auto;
+  max-width: 120px;
+  height: auto;
+  margin: 0 4%;
+}
+
 .moreinfo {
   font-size: 105.55%;
   text-align: center;
@@ -1702,7 +1782,8 @@ HR.event {
 
 .partners {
   margin-top: 4em;
-  outline: 1px solid red;
+  display: table;
+  width: 100%;
 }
 
 .partners:after {
@@ -1711,9 +1792,11 @@ HR.event {
   clear: both;
 }
 
-.partners .one-fourth {
-  outline: 1px solid blue;
+.partners .four-col {
+  display: table-cell;
+  width: 25%;
   text-align: center;
+  vertical-align: middle;
 }
 
 .friends {
@@ -1741,6 +1824,31 @@ HR.event {
   -webkit-column-gap: 20px;
   -moz-column-gap: 20px;
   column-gap: 20px;
+}
+
+.contact-page-content {
+  text-align: center;
+  font-size: 116.66%;
+  line-height: 1.6em;
+  color: #696969;
+}
+
+.contact-directly {
+  background: #EBEBEB;
+  color: #363636;
+  font-size: 133.33%;
+  text-align: center;
+  padding: 3em 0;
+  margin-top: 3em;
+}
+
+.contact-directly A:link, .contact-directly A:visited {
+  color: #363636;
+  font-weight: bold;
+}
+
+.contact-directly A:hover, .contact-directly A:active {
+  color: #8EC641;
 }
 
 @media only screen and (max-width: 800px) {

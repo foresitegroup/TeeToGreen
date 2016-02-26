@@ -25,6 +25,9 @@ $row = $result->fetch_array(MYSQLI_ASSOC);
     <input type="text" name="image" placeholder="Image" value="<?php echo $row['image']; ?>"><br>
     <br>
 
+    <input type="text" name="sponsors" placeholder="Event Sponsors" value="<?php echo $row['sponsors']; ?>"><br>
+    <br>
+
     <textarea name="blurb" placeholder="Blurb"><?php echo $row['blurb']; ?></textarea>
   </div>
 

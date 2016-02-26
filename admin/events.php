@@ -25,6 +25,9 @@ include "header.php";
       <input type="text" name="image" placeholder="Image"><br>
       <br>
 
+      <input type="text" name="sponsors" placeholder="Event Sponsors"><br>
+      <br>
+
       <textarea name="blurb" placeholder="Blurb"></textarea><br>
       <br>
 

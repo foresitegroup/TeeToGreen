@@ -14,37 +14,37 @@ include "header.php";
   <br>
   
   <div class="partners">
-    <div class="one-fourth">
+    <div class="four-col">
       <img src="images/partner-adidas.png" alt="Adidas">
     </div>
 
-    <div class="one-fourth">
+    <div class="four-col">
       <img src="images/partner-foresite.png" alt="Foresite Group">
     </div>
 
-    <div class="one-fourth">
+    <div class="four-col">
       <img src="images/partner-eggers.png" alt="Eggers">
     </div>
 
-    <div class="one-fourth last">
+    <div class="four-col">
       <img src="images/partner-lpga.png" alt="LPGA">
     </div>
   </div>
 
   <div class="partners">
-    <div class="one-fourth">
+    <div class="four-col">
       <img src="images/partner-raven.png" alt="Raven">
     </div>
 
-    <div class="one-fourth">
+    <div class="four-col">
       <img src="images/partner-rbc.png" alt="RBC">
     </div>
 
-    <div class="one-fourth">
+    <div class="four-col">
       <img src="images/partner-taylormade.png" alt="TaylorMade">
     </div>
 
-    <div class="one-fourth last">
+    <div class="four-col">
       <img src="images/partner-pga.png" alt="PGA">
     </div>
   </div>
@@ -151,11 +151,9 @@ include "header.php";
               .done(function(response) {
                 $(formMessages).html(response);
 
-                $('#name').val('');
-                $('#phone').val('');
-                $('#email').val('');
-                $('#subject').val('');
-                $('#message').val('');
+                $(form).find('input:text, textarea, select').val('');
+                $('#email').val(''); // Grrr!
+                $(form).find('input:radio, input:checked').removeAttr('checked').removeAttr('selected');
               })
               .fail(function(data) {
                 if (data.responseText !== '') {
@@ -207,7 +205,7 @@ include "header.php";
           <textarea name="<?php echo md5("message" . $ip . $salt . $timestamp); ?>" id="message" placeholder="* Message"></textarea><br>
           <br>
 
-          <input type="hidden" name="referrer" value="partners">
+          <input type="hidden" name="referrer" value="partners.php">
 
           <input type="text" name="confirmationCAP" style="display: none;"> <?php // Non-displaying field as a sort of invisible CAPTCHA. ?>
 
