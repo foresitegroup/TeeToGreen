@@ -102,7 +102,8 @@ function email($address, $name="") {
   </head>
   <body>
 
-  <div class="header<?php if ($PageTitle == "") echo "-home"; ?>">
+  <div class="header<?php if ($PageTitle == "") echo "-home"; if ($HeaderClass != "") echo " " . $HeaderClass; ?>"<?php if ($HeaderBackground != "") echo " style=\"background-image: url(" . $HeaderBackground . ");\""; ?>>
+    <?php if ($HeaderBackground != "") { ?><div class="overlay"><?php } ?>
     <div class="menu">
       <div class="site-width">
         <a href="<?php echo $TopDir; ?>."><img src="<?php echo $TopDir; ?>images/logo-small.png" alt="Tee To Green" id="logo"></a>

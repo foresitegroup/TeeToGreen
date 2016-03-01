@@ -70,7 +70,12 @@ include_once "inc/dbconfig.php";
 <div class="home-event">
   <div class="site-width sr-bottom">
     <?php
-    $result = $mysqli->query("SELECT * FROM events ORDER BY date ASC LIMIT 1");
+    $now = time();
+    $result = $mysqli->query("SELECT * FROM events WHERE date >= $now ORDER BY date ASC LIMIT 1");
+    if ($result->num_rows === 0) {
+      mysqli_free_result($result);
+      $result = $mysqli->query("SELECT * FROM events ORDER BY date DESC LIMIT 1");
+    }
     $row = $result->fetch_array(MYSQLI_ASSOC);
     ?>
     <div class="col2">

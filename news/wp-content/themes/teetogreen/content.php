@@ -11,14 +11,17 @@
 ?>
 
 <?php if ( !is_single() ) : ?>
+<div class="site-width">
 <div class="blog-entry">
 <?php endif; ?>
-
+  
+  <?php if ( !is_single() ) : ?>
 	<div class="entry-header">
-		<?php twentyfifteen_post_thumbnail(); ?>
+		<?php //twentyfifteen_post_thumbnail(); ?>
 		<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
-		<?php the_date(); ?>
+		<h4><?php the_date(); ?></h4>
 	</div><!-- .entry-header -->
+	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php
@@ -32,7 +35,7 @@
 				the_tags( '<span class="tags-links">Tags: ', ', ', '</span>' );
 			else :
 				the_excerpt();
-			  echo "<a href=\"" . get_permalink() . "\">READ MORE</a>";
+			  echo "<a href=\"" . get_permalink() . "\" class=\"ttg-button\">READ FULL STORY</a>";
 			endif;
 
 			wp_link_pages( array(
@@ -47,5 +50,6 @@
 	</div><!-- .entry-content -->
 
 <?php if ( !is_single() ) : ?>
-</div>
+</div> <!-- END blog-entry -->
+</div> <!-- END site-width -->
 <?php endif; ?>

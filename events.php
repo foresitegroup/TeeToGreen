@@ -39,7 +39,8 @@ $now = time();
 
 <?php
 $count = 1;
-$result = $mysqli->query("SELECT * FROM events WHERE date >= $now ORDER BY date ASC");
+//$result = $mysqli->query("SELECT * FROM events WHERE date >= $now ORDER BY date ASC");
+$result = $mysqli->query("SELECT * FROM events ORDER BY date ASC");
 while($row = $result->fetch_array(MYSQLI_ASSOC)) {
   if ($count > 1) echo "<hr class=\"event\">";
   $image = ($row['image'] != "") ? $row['image'] : "event-generic.jpg";
