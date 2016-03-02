@@ -1840,28 +1840,10 @@ HR.event {
   border: 4px solid #464647;
 }
 
-.ttg .one-fourth {
-  line-height: 1.8em;
-}
-
-.ttg .three-fourth {
-  font-size: 116.66%;
+.ttg {
+  font-size: 21px;
   line-height: 2em;
   color: #363636;
-  margin-bottom: 4em;
-}
-
-.ttg .nine {
-  font-family: 'oswaldmedium', sans-serif;
-  font-size: 150%;
-  line-height: 1.4em;
-  text-transform: uppercase;
-  color: #161A10;
-  margin-bottom: 4em;
-}
-
-.ttg .one-half.center {
-  padding-top: 3em;
 }
 
 .ttg .one-half {
@@ -1872,14 +1854,16 @@ HR.event {
   max-width: 100%;
 }
 
-.ttg .pull {
+.ttg .one-half.center {
+  padding-top: 2em;
+}
+
+.ttg H3 {
   font-family: 'oswaldmedium', sans-serif;
   font-size: 32px;
-  line-height: 1.5em;
+  line-height: 1em;
   text-transform: uppercase;
-  text-align: center;
-  color: #898989;
-  padding-top: 2.25em;
+  margin: 0.5em 0;
 }
 
 .ttg H4 {
@@ -1887,12 +1871,53 @@ HR.event {
   font-size: 24px;
   line-height: 1em;
   text-transform: uppercase;
-  color: #161A10;
   margin: 0 0 0.5em;
 }
 
-.tee-to-green-links {
+.ttg .one-third {
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #464647;
+}
+
+.nine {
   margin-top: 4em;
+  background: #F1F1F2;
+  padding: 3.5em 0;
+}
+
+.nine .one-fourth {
+  font-family: 'oswaldmedium', sans-serif;
+  font-size: 433%;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  color: #8EC641;
+  text-align: right;
+}
+
+.nine .three-fourth {
+  float: right;
+  width: 72%;
+}
+
+.nine .three-fourth .two-third {
+  font-size: 21px;
+  line-height: 2em;
+  color: #363636;
+  width: 67%;
+}
+
+.nine .three-fourth .one-third {
+  float: right;
+  font-family: 'Oswald', sans-serif;
+  font-size: 150%;
+  font-weight: bold;
+  line-height: 1.44em;
+  text-transform: uppercase;
+  width: 26%;
+}
+
+.tee-to-green-links {
   background: #161A10;
   padding: 1.75em 0;
   text-align: center;
@@ -2085,16 +2110,16 @@ HR.event {
     font-size: 165%;
   }
 
-  .ttg .nine {
-    font-size: 145%;
-  }
-
   .ttg .one-half.center {
     padding-top: 1em;
   }
 
-  .ttg .pull {
-    padding-top: 0.4em;
+  .nine .one-fourth {
+    font-size: 340%;
+  }
+
+  .nine .three-fourth .one-third {
+    font-size: 115%;
   }
 
   .friends .five-col {
@@ -2313,25 +2338,22 @@ HR.event {
     margin-top: 1.5em;
   }
 
-  .ttg .one-fourth,
-  .ttg .three-fourth,
-  .ttg .one-half {
+  .ttg .one-third,
+  .ttg .one-half,
+  .nine .one-fourth,
+  .nine .three-fourth {
     float: none;
     width: 100%;
     margin: 0 0 30px 0;
   }
 
-  .ttg .nine {
-    font-size: 150%;
-  }
-
-  .ttg .one-half.center,
-  .ttg .pull {
+  .ttg .one-half.center {
     padding-top: 0;
   }
 
-  .ttg H4 {
-    margin: 0;
+  .nine .one-fourth {
+    text-align: center;
+    font-size: 433%;
   }
 
   .friends .five-col {
@@ -2540,6 +2562,17 @@ HR.event {
 
   .event H3 {
     font-size: 300%;
+  }
+
+  .nine .three-fourth .two-third,
+  .nine .three-fourth .one-third {
+    float: none;
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+
+  .nine .three-fourth .one-third {
+    font-size: 150%;
   }
 
   .tee-to-green-links A.ttg-button:link,

@@ -112,7 +112,7 @@ include "header.php";
   </div>
 </div>
 
-<div class="partners-form">
+<div class="partners-form" id="become">
   <div class="site-width">
     <div class="one-third">
       <h2>BECOME A PARTNER TODAY!</h2>

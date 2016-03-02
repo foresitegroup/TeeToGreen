@@ -12,26 +12,11 @@ include "header.php";
 </div>
 
 <div class="site-width ttg">
-  <div class="three-fourth">
-    <strong>The Tee To Green Golf Classic</strong> is an event that exists through The First Tee of Southeast Wisconsin to impact the lives of young people by providing learning facilities and educational programs that promote character development and life-enhancing values through the game of golf. The First Tee Life Skills experience teaches participants a set of skills to allow them to face challenges at home, school and play in a constructive manner. The goal is for participants to internalize the Nine Core Values, which are at the heart of The First Tee mission. At The First Tee of Southeast Wisconsin golf and life lessons are seamlessly integrated into each class.
-  </div>
-
-  <div class="one-fourth last nine">
-    Honesty<br>
-    Integrity<br>
-    Sportsmanship<br>
-    Respect<br>
-    Confidence<br>
-    Responsibility<br>
-    Perseverance<br>
-    Courtesy<br>
-    Judgment
-  </div>
-
-  <div style="clear: both;"></div>
+  Founded in 2004, as a collaborative effort with the Wisconsin PGA Junior Foundation, <strong>The First Tee of Southeast Wisconsin</strong> is a 501(c)(3) organization designed to serve as a place for participants to learn valuable life skills and character lessons through creative activities and instructional programs that incorporate the fundamental teachings of golf. The goal of The First Tee of Southeast Wisconsin is to incorporate responsibility, courtesy, honesty and integrity - all values inherent in the game of golf - into the daily lives of those who participate. By using the fundamentals of golf, The First Tee of Southeast Wisconsin equips youth with the skills needed to follow their dreams, advance academically and athletictally, strengthen their social abilities and become productive members of their local community.<br>
+  <br>
 
   <div class="one-half center">
-    <img src="images/logo-large.png" alt="Tee To Green">
+    <img src="images/first-tee-logo.png" alt="Firest Tee of Southeast Wisconsin">
   </div>
 
   <div class="one-half last">
@@ -44,36 +29,90 @@ include "header.php";
     <img src="images/tee-to-green2.jpg" alt="" class="shadow">
   </div>
 
-  <div class="one-half last pull">
-     In addition to learning fundamentals of the golf swing and the game, a sample of life skills lessons include:
+  <div class="one-half last">
+    <h3>The First Tee Nine Healthy Habits</h3>
+    The First Tee Nine Healthy Habits were created to promote healthy, active lifestyles for young people. The healthy habits are a list of nine health and wellness topics presented as a part The First Tee, formatted for easy understanding and learning by elementary-age students and chapter participants.
   </div>
 
   <div style="clear: both;"></div>
 
-  <div class="one-fourth">
-    <h4>INTERPERSONAL SKILLS</h4>
-    Proper introduction when meeting someone new and how to effectively communicate with others.
+  <h4>PHYSICAL</h4>
+  <div class="one-third">
+    <strong>Energy -</strong> It is important to understand and make healthy choices about when to eat, how much to  eat, and the types of food and drinks to provide the body with the most useful energy.
   </div>
 
-  <div class="one-fourth">
-    <h4>SELF MANAGMENT</h4>
-    Techniques for managing thoughts and emotions.
+  <div class="one-third">
+    <strong>Play -</strong> A variety of energizing play can help the body stay strong, lean and fit, and be fun in the process. Sleep and other forms of "re-charging" allow one to engage in play on a daily basis.
   </div>
 
-  <div class="one-fourth">
-    <h4>GOAL SETTING</h4>
-    Setting attainable goals to reach desired dreams.
+  <div class="one-third last">
+    <strong>Safety -</strong> Physical safety includes playing in a safe environment and by the rules, protecting the body with proper equipment, warm-up and cool-down and wearing sun protection.
   </div>
 
-  <div class="one-fourth last">
-    <h4>RESILIENCY SKILLS</h4>
-    Strategies to adapt to, manage and overcome challenges.
-  </div>
-</div>
+  <div style="clear: both;"></div>
+  <br>
 
-<div class="tee-to-green-links">
-  <a href="#" class="ttg-button">Event Schedule</a>
-  <a href="#" class="ttg-button">Become A Sponsor</a>
+  <h4>EMOTIONAL</h4>
+  <div class="one-third">
+    <strong>Vision -</strong> In order to make the most of one's unique gifts &mdash; talents, characteristics and abilities &mdash; an individual needs to learn from the past, value the present, create their vision and future to ultimately "leave a footprint."
+  </div>
+
+  <div class="one-third">
+    <strong>Mind -</strong> The mind is a powerful tool for health. One's mind influences his/her emotions and behaviors and can be utilized for self-improvement, building confidence and maintaining perspective.
+  </div>
+
+  <div class="one-third last">
+    <strong>Family -</strong> When family members participate in activities together &mdash; share meals, communicate and establish roles and responsibilities &mdash; they are more likely to be successful in achieving their health-related goals. 
+  </div>
+
+  <div style="clear: both;"></div>
+  <br>
+
+  <h4>SOCIAL</h4>
+  <div class="one-third">
+    <strong>Friends -</strong> Maintaining healthy relationships includes surrounding one's self with friends and supportive people, while effectively handling challenging situations, including bullying and navigating the digital age with social media.
+  </div>
+
+  <div class="one-third">
+    <strong>School -</strong> Success in school &mdash; learning, building relationships and contributing to the school environment &mdash; leads to success in other areas of life.
+  </div>
+
+  <div class="one-third last">
+    <strong>Community -</strong> Like the health of one's body, it is important to also explore the health of one's community and discover how one can give back and care for its environment and safety.
+  </div>
+
+  <div style="clear: both;"></div>
+</div> <!-- END ttg -->
+
+<div class="nine">
+  <div class="site-width">
+    <div class="one-fourth">
+      The <span style="color: #31401D;">9</span> Core Values
+    </div> <!-- END one-fourth -->
+
+    <div class="three-fourth last">
+      <div class="two-third">
+        The First Tee has established Nine Core Values that represent some of the many inherently positive values connected with the game of golf. By participating in The First Tee, young people are introduced to core values which are incorporated throughout the program. Parents are encouraged to reinforce these behaviors by talking about them, what they mean and what these behaviors can look like at home.
+      </div> <!-- END two-third -->
+
+      <div class="one-third last">
+        Honesty<br>
+        Integrity<br>
+        Sportsmanship<br>
+        Respect<br>
+        Confidence<br>
+        Responsibility<br>
+        Perseverance<br>
+        Courtesy<br>
+        Judgment
+      </div> <!-- END one-third -->
+    </div> <!-- END three-fourth -->
+  </div>
+</div> <!-- END nine -->
+
+<div class="tee-to-green-links" id="ambassadors">
+  <a href="events.php" class="ttg-button">Event Schedule</a>
+  <a href="partners.php#become" class="ttg-button">Become A Partner</a>
 </div>
 
 <div class="tee-to-green">
@@ -83,19 +122,19 @@ include "header.php";
     </div>
 
     <div class="two-third last">
-      In 2015, we created a new Foundation that will oversee The First Tee of Southeast Wisconsin! We have changed the name to reflect our expansion of programming throughout the area. We are working with friends in Racine, Milwaukee, and Ozaukee County throughout the upcoming year and plan to be in every county in the southeast portion of the state within five years.<br>
+      In 2015, we created a new foundation that will oversee The First Tee of Southeast Wisconsin! We have changed the name to reflect our expansion of programming throughout the area. We are working with friends in Racine, Milwaukee, and Ozaukee County throughout the upcoming year and plan to be in every county in the southeast portion of the state within five years.<br>
       <br>
 
       <strong>Ambassador Club Membership Benefits</strong>
       <ul>
-        <li>Name Recognition Ambassador's Plaque in The Golf House Office</li>
-        <li>Official Ambassador's Club pin</li>
+        <li>Name Recognition Ambassadors Plaque in The Golf House Office</li>
+        <li>Official Ambassadors Club pin</li>
         <li>Invite to the End of Year Annual Review</li>
         <li>Name Recognition on our official event website</li>
       </ul>
       <br>
 
-      <a href="#" class="down">DOWNLOAD FORM</a>
+      <a href="pdf/Ambassadors_Club.pdf" class="down">DOWNLOAD FORM</a>
     </div>
 
     <div style="clear: both;"></div>
