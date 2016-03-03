@@ -87,7 +87,7 @@ include "header.php";
             <input type="radio" name="interest" value="Events" id="r-events"> <label for="r-events">EVENTS</label>
           </div><br>
           <br>
-
+          
           <div class="one-half">
             <input type="text" name="<?php echo md5("name" . $ip . $salt . $timestamp); ?>" id="name" placeholder="* First &amp; Last Name">
           </div>

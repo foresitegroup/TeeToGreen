@@ -10,9 +10,9 @@ include "header.php";
 </div>
 
 <div class="site-width">
-  Partnertship... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet.  <a href="#contact-form" style="font-weight: bold;">Become a Partner</a><br>
+  The First Tee of Southeast Wisconsin values its extraordinary partnerships with local civic and charitable organizations, public and private entities and individuals.  Thanks to the generous support of our partners, The First Tee has been able to develop affordable and accessible golf-learning facilities, and more importantly, the full potential of our you.  The organizations listed below have generously provided financial support or in-kind goods or service donations to help further the mission of The First Tee of Southeast Wisconsin.<br>
   <br>
-  
+
   <div class="partners">
     <div class="four-col">
       <img src="images/partner-adidas.png" alt="Adidas">
@@ -119,7 +119,10 @@ include "header.php";
     </div>
 
     <div class="two-third last">
-      Short Blurb about Partnership... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      The First Tee is reliant upon charitable contributions to carry out our mission and is grateful to receive widespread support from those in the golf industry and beyond. A fundamental strength of The First Tee is the direct support it receives from some of the game's most respected and influential organizations.<br>
+      <br>
+
+      Want to make a difference in the lives of young people? There are many ways you can support the mission of The First Tee and help us introduce the game of golf and it's inherent values like honesty, respect and confidence, to kids and teens.
     </div>
 
     <div style="clear: both;"></div>
@@ -183,9 +186,19 @@ include "header.php";
 
       <div id="contact-form-messages"><?php echo $feedback; ?></div>
       <h2>Become a Partner!</h2>
-      <div class="required">* Required</div>
       <form action="form-contact.php" method="POST" id="contact-form">
         <div>
+          <div class="radio">
+            <h4>INTERESTED IN</h4>
+            <input type="radio" name="interest" value="Donating Equipment" id="r-equipment"> <label for="r-equipment">DONATING EQUIPMENT</label>
+            <input type="radio" name="interest" value="Volunteering Time" id="r-time"> <label for="r-time">VOLUNTEERING TIME</label>
+            <input type="radio" name="interest" value="Sponsorship Opportunities" id="r-sponsorship"> <label for="r-sponsorship">SPONSORSHIP OPPORTUNITIES</label>
+            <input type="radio" name="interest" value="Participation" id="r-participation"> <label for="r-participation">PARTICIPATION</label>
+            <input type="radio" name="interest" value="More Information" id="r-more"> <label for="r-more">MORE INFORMATION</label>
+          </div>
+          <br>
+          
+          <div class="required">* Required</div>
           <div class="one-half">
             <input type="text" name="<?php echo md5("name" . $ip . $salt . $timestamp); ?>" id="name" placeholder="* First &amp; Last Name">
           </div>

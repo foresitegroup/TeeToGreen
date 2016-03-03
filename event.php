@@ -28,7 +28,7 @@ include "header.php";
 <div class="event-banner" style="background-image: url(images/<?php echo $image; ?>);">
   <div class="overlay">
     <div class="site-width">
-      <h3><?php //echo date("F j, Y", $row['date']); ?>SEPTEMBER 19, 2016</h3>
+      <h3><?php echo date("F j, Y", $row['date']); ?></h3>
       <h2><?php echo $row['title']; ?></h2>
       <?php if ($row['location'] != "") { ?>
       <img src="images/pin-gray.png" alt="">

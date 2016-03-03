@@ -237,7 +237,7 @@ include_once "inc/dbconfig.php";
     <div class="twitter">
       <a href="#" class="twitter-name">@TeeToGreen</a>
 
-      <script type="text/javascript" src="inc/twitterFetcher_min.js"></script>
+      <script type="text/javascript" src="inc/twitterFetcher.js"></script>
       <script>
         var config1 = {
           "id": '435921074492948480',

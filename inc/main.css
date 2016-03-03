@@ -1029,6 +1029,8 @@ A.down:before {
   position: relative;
   margin: 0 0 1em;
   padding-bottom: 1em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .news-twitter .twitter LI .tweet:before {
@@ -1235,7 +1237,7 @@ A.down:before {
 }
 
 .contact .radio H4 {
-  margin: 0;
+  margin: 0 0.5em;
   display: inline-block;
   font-weight: 400;
   font-size: 23px;
@@ -1250,7 +1252,7 @@ A.down:before {
   cursor: pointer;
   position: relative;
   padding-right: 1.5em;
-  margin-left: 2em;
+  margin: 0 1em;
 }
 
 .contact .radio INPUT[type=radio] {
@@ -1954,10 +1956,15 @@ HR.event {
 }
 
 .partners .four-col {
-  display: table-cell;
+  display: inline-block;
   width: 25%;
   text-align: center;
   vertical-align: middle;
+}
+
+.partners .four-col IMG {
+  max-width: 100%;
+  height: auto;
 }
 
 .friends {
@@ -2122,10 +2129,20 @@ HR.event {
     font-size: 115%;
   }
 
+  .partners .four-col {
+    box-sizing: border-box;
+    padding: 0 3%;
+  }
+
   .friends .five-col {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
+  }
+
+  .contact .radio H4 {
+    margin: 0;
+    display: block;
   }
 }
 
@@ -2135,6 +2152,70 @@ HR.event {
 
 @media only screen and (max-width: 600px) {
   /* Small tablet */
+  #menu-toggle {
+    display: block;
+    cursor: pointer;
+    float: right;
+    margin: 40px 3% 0 0;
+    color: #EBEBEB;
+    font-size: 3em;
+  }
+  
+  .header .menu #menu-toggle,
+  .menu.sticky #menu-toggle {
+    margin-top: 10px;
+  }
+  
+  #main-menu {
+    float: none;
+    width: 100%;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    z-index: 999999;
+    display: none;
+    padding: 0;
+  }
+
+  .header .menu #main-menu,
+  .menu.sticky #main-menu {
+    top: 86px;
+    padding-top: 0;
+  }
+
+  #main-menu UL {
+    background: #161A10;
+    padding: 0.5em 5%;
+  }
+
+  #main-menu UL LI,
+  #main-menu UL LI UL LI {
+    float: none;
+    margin-left: 0;
+    padding: 0.75em 0;
+    border-top: 1px solid #8EC641;
+    font-size: 28px;
+  }
+
+  #main-menu UL LI:hover {
+    border-bottom: 0;
+  }
+
+  #main-menu UL LI UL,
+  #main-menu UL LI:hover UL,
+  .menu.sticky #main-menu UL LI:hover UL {
+    display: block;
+    position: relative;
+    top: 0.75em;
+    left: 0;
+    padding: 0;
+  }
+
+  #main-menu UL LI UL LI A:hover,
+  #main-menu UL LI UL LI A:active {
+    color: #FFFFFF;
+  }
+
   .banner-home {
     padding-top: 4em;
   }
@@ -2250,6 +2331,14 @@ HR.event {
     margin: 3em auto 0;
   }
 
+  .contact-page .contact {
+    margin-top: 0;
+  }
+
+  .partners-form .contact {
+    margin-top: 1em;
+  }
+
   #footer-menu {
     display: none;
   }
@@ -2356,6 +2445,15 @@ HR.event {
     font-size: 433%;
   }
 
+  .partners {
+    margin-top: 0;
+  }
+
+  .partners .four-col {
+    width: 50%;
+    margin-top: 4em;
+  }
+
   .friends .five-col {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -2372,68 +2470,13 @@ HR.event {
     height: 600px;
   }
 
-  #menu-toggle {
-    display: block;
-    cursor: pointer;
-    float: right;
-    margin: 40px 3% 0 0;
-    color: #EBEBEB;
-    font-size: 3em;
-  }
-  
-  .header .menu #menu-toggle,
-  .menu.sticky #menu-toggle {
-    margin-top: 10px;
-  }
-  
-  #main-menu {
-    float: none;
-    width: 100%;
-    position: absolute;
-    top: 140px;
-    left: 0;
-    z-index: 999999;
-    display: none;
-    padding: 0;
+  .header .menu,
+  .menu.sticky {
+    position: static;
   }
 
-  .header .menu #main-menu,
-  .menu.sticky #main-menu {
-    top: 86px;
-    padding-top: 0;
-  }
-
-  #main-menu UL {
-    background: #161A10;
-    padding: 0.5em 5%;
-  }
-
-  #main-menu UL LI,
-  #main-menu UL LI UL LI {
-    float: none;
-    margin-left: 0;
-    padding: 0.75em 0;
-    border-top: 1px solid #8EC641;
-    font-size: 28px;
-  }
-
-  #main-menu UL LI:hover {
-    border-bottom: 0;
-  }
-
-  #main-menu UL LI UL,
-  #main-menu UL LI:hover UL,
-  .menu.sticky #main-menu UL LI:hover UL {
-    display: block;
-    position: relative;
-    top: 0.75em;
-    left: 0;
-    padding: 0;
-  }
-
-  #main-menu UL LI UL LI A:hover,
-  #main-menu UL LI UL LI A:active {
-    color: #FFFFFF;
+  .subheader {
+    padding-top: 1.3em;
   }
 
   .banner-home {
@@ -2578,5 +2621,10 @@ HR.event {
   .tee-to-green-links A.ttg-button:link,
   .tee-to-green-links A.ttg-button:visited {
     margin: 0.5em 1.5em;
+  }
+
+  .partners .four-col {
+    width: 100%;
+    padding: 0;
   }
 }
