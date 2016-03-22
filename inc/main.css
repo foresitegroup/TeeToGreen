@@ -1103,10 +1103,16 @@ A.down:before {
   color: #FFFFFF;
 }
 
+.ac-page {
+  background: #061A2F;
+  margin-top: 4em;
+}
+
 .contact-page {
   background: #1F2717;
 }
 
+.ac-page .contact,
 .contact-page .contact {
   padding: 1.5em 5% 3.5em;
   background: transparent;

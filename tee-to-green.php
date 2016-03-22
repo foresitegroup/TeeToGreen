@@ -125,7 +125,7 @@ include "header.php";
       In 2015, we created a new foundation that will oversee The First Tee of Southeast Wisconsin! We have changed the name to reflect our expansion of programming throughout the area. We are working with friends in Racine, Milwaukee, and Ozaukee County throughout the upcoming year and plan to be in every county in the southeast portion of the state within five years.<br>
       <br>
 
-      <strong>Ambassador Club Membership Benefits</strong>
+      <strong>Ambassadors Club Membership Benefits</strong>
       <ul>
         <li>Name Recognition Ambassadors Plaque in The Golf House Office</li>
         <li>Official Ambassadors Club pin</li>
@@ -197,7 +197,7 @@ include "header.php";
       </noscript>
 
       <div id="contact-form-messages"><?php echo $feedback; ?></div>
-      <h2>Interested in becoming a member?</h2>
+      <h2>Interested in joining the Ambassadors Club?</h2>
       <div class="required">* Required</div>
       <form action="form-contact.php" method="POST" id="contact-form">
         <div>
