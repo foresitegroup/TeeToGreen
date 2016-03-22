@@ -13,7 +13,7 @@ $row = $result->fetch_array(MYSQLI_ASSOC);
     <input type="text" name="title" placeholder="Title" value="<?php echo $row['title']; ?>"><br>
     <br>
 
-    <input type="text" name="date" placeholder="Date" value="<?php echo date("n/j/Y", $row['date']); ?>"><br>
+    <input type="text" name="date" placeholder="Date" value="<?php echo ($row['date'] != "") ? date("n/j/Y", $row['date']) : ""; ?>"><br>
     <br>
 
     <input type="text" name="location" placeholder="Location" value="<?php echo $row['location']; ?>"><br>

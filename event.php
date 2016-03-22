@@ -11,13 +11,13 @@ include "header.php";
 
   <div class="subheader countdown single-event site-width">
     <div class="countdown-text">
-      <h2><?php echo date("m.d.Y", $row['date']); ?></h2>
+      <h2><?php echo ($row['date'] != "") ? date("m.d.Y", $row['date']) : "TBA"; ?></h2>
     </div>
 
     <div id="countdown"></div>
     <script type="text/javascript" src="inc/jquery.countdown.min.js"></script>
     <script type="text/javascript">
-      $('#countdown').countdown('<?php echo date("n/j/Y G:i:s", $row['date']); ?>', function(event) {
+      $('#countdown').countdown('<?php echo ($row['date'] != "") ? date("n/j/Y G:i:s", $row['date']) : 0; ?>', function(event) {
         $(this).html(event.strftime('<div>%D<div>Days</div></div> <div class="sep">:</div> <div>%H<div>Hours</div></div> <div class="sep">:</div> <div>%M<div>Minutes</div></div> <div class="sep">:</div> <div>%S<div>Seconds</div></div>'));
       });
     </script>
@@ -28,7 +28,7 @@ include "header.php";
 <div class="event-banner" style="background-image: url(images/<?php echo $image; ?>);">
   <div class="overlay">
     <div class="site-width">
-      <h3><?php echo date("F j, Y", $row['date']); ?></h3>
+      <h3><?php echo ($row['date'] != "") ? date("F j, Y", $row['date']) : "TBA"; ?></h3>
       <h2><?php echo $row['title']; ?></h2>
       <?php if ($row['location'] != "") { ?>
       <img src="images/pin-gray.png" alt="">
@@ -78,11 +78,14 @@ if ($row['sponsors'] != "") {
   <div class="site-width">
     <div class="one-third">
       <h2>WHY BECOME AN EVENT SPONSOR?</h2>
-      <a href="#" class="ttg-button">Sponsorship Opportunities</a>
+      <a href="partners.php#become" class="ttg-button">Sponsorship Opportunities</a>
     </div>
 
     <div class="two-third last">
-      Short Blurb about Sponsorship... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      We all want to see Kids grow up to be responsible, respectful, hard working and caring adults. We believe that through sport,  especially golf, we can instill these important lessons.<br>
+      <br>
+
+      You can support or sponsor one event or all of them. Tee to Green will be adding more events throughout the year and we will always need partners and event sponsors. Please contact us if you are interested.
     </div>
 
     <div style="clear: both;"></div>

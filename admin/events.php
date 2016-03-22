@@ -60,7 +60,7 @@ include "header.php";
 
     <div class="three-fourth last">
       <strong><?php echo $row['title']; ?></strong><br>
-      <?php echo date("n/j/Y", $row['date']); ?><br>
+      <?php echo ($row['date'] != "") ? date("n/j/Y", $row['date']) : "TBA"; ?><br>
       <br>
     </div>
     <?php

@@ -52,7 +52,7 @@ while($row = $result->fetch_array(MYSQLI_ASSOC)) {
     </div>
 
     <div class="info">
-      <h2><?php echo date("F j, Y", $row['date']); ?></h2>
+      <h2><?php echo ($row['date'] != "") ? date("n/j/Y", $row['date']) : "TBA"; ?></h2>
       <h3><?php echo $row['title']; ?></h3>
       <?php echo $row['blurb']; ?><br>
       <a href="event.php?<?php echo $row['id']; ?>" class="ttg-button">View Event Details</a>
