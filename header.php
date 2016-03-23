@@ -55,9 +55,11 @@ function email($address, $name="") {
           if ($(this).scrollTop() > 131) {
             $(".menu").addClass("sticky");
             $("#logo").attr("src", "<?php echo $TopDir; ?>images/logo-small.png");
+            $(".banner-home").addClass("bh-sticky");
           } else {
             $(".header-home .menu").removeClass("sticky");
             $(".header-home .menu #logo").attr("src", "<?php echo $TopDir; ?>images/logo.png");
+            $(".banner-home").removeClass("bh-sticky");
           }
         });
 

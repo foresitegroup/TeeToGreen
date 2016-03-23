@@ -1,5 +1,5 @@
 /*********************************************************************
-*  #### Twitter Post Fetcher v15.0 ####
+*  #### Twitter Post Fetcher v15.0.1 ####
 *  Coded by Jason Mayes 2015. A present to all the developers out there.
 *  www.jasonmayes.com
 *  Please keep this disclaimer with my code if you use it. Thanks. :-)
@@ -85,7 +85,7 @@
   }
 
   function extractImageUrl(image_data) {
-    if (image_data !== undefined) {
+    if (image_data !== undefined && image_data.innerHTML.indexOf('data-srcset') >= 0) {
       var data_src = image_data.innerHTML
           .match(/data-srcset="([A-z0-9%_\.-]+)/i)[0];
       return decodeURIComponent(data_src).split('"')[1];
@@ -251,11 +251,12 @@
           arrayTweets.push({
             tweet: tweets[n].innerHTML,
             author: authors[n].innerHTML,
-            time: times[n].innerText,
+            time: times[n].textContent,
             image: extractImageUrl(images[n]),
             rt: rts[n],
             tid: tids[n],
-            permalinkURL: permalinksURL[n].href
+            permalinkURL: (permalinksURL[n] === undefined) ?
+                '' : permalinksURL[n].href 
           });
           n++;
         }
@@ -268,10 +269,10 @@
             var dateString = formatterFunction(newDate, datetimeText);
             times[n].setAttribute('aria-label', dateString);
 
-            if (tweets[n].innerText) {
+            if (tweets[n].textContent) {
               // IE hack.
               if (supportsClassName) {
-                times[n].innerText = dateString;
+                times[n].textContent = dateString;
               } else {
                 var h = document.createElement('p');
                 var t = document.createTextNode(dateString);
@@ -292,12 +293,12 @@
               }
             }
             if (printUser) {
-              op += '<div class="user">' + strip(authors[n].innerHTML) +
-                  '</div>';
+              op += '<div class="user">' + strip(authors[n].innerHTML) + '</div>';
             }
             op += '<p class="tweet">' + strip(tweets[n].innerHTML);
-            if (images[n] !== undefined) {
-              var theImageURL = extractImageUrl(images[n]).split(":");
+            var ExtractedUrl = extractImageUrl(images[n]);
+            if (ExtractedUrl !== undefined) {
+              var theImageURL = ExtractedUrl.split(":");
               var theImage = theImageURL[0]+':'+theImageURL[1];
               op += '<a href="' + theImage + '" target="new">' + theImage + '</a>';
             }
@@ -312,13 +313,13 @@
               }
             }
           } else {
-            if (tweets[n].innerText) {
+            if (tweets[n].textContent) {
               if (printUser) {
-                op += '<p class="user">' + authors[n].innerText + '</p>';
+                op += '<p class="user">' + authors[n].textContent + '</p>';
               }
-              op += '<p class="tweet">' +  tweets[n].innerText + '</p>';
+              op += '<p class="tweet">' +  tweets[n].textContent + '</p>';
               if (printTime) {
-                op += '<p class="timePosted">' + times[n].innerText + '</p>';
+                op += '<p class="timePosted">' + times[n].textContent + '</p>';
               }
 
             } else {

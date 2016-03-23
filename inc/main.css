@@ -207,6 +207,15 @@ INPUT[type="submit"]:hover {
   margin-right: 0;
 }
 
+.one-fourth IMG,
+.one-half IMG,
+.one-third IMG,
+.two-third IMG,
+.three-fourth IMG {
+  max-width: 100%;
+  height: auto;
+}
+
 .center {
   text-align: center;
 }
@@ -392,6 +401,7 @@ A.down:before {
 #main-menu UL LI UL LI A:link, #main-menu UL LI UL LI A:visited {
   color: #FFFFFF;
   text-decoration: none;
+  display: block;
 }
 
 #main-menu UL LI A:hover,
@@ -491,6 +501,7 @@ A.down:before {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -510,6 +521,10 @@ A.down:before {
   font-size: 111.11%;
   box-sizing: border-box;
   padding: 5.5em 0 0 11.2%;
+}
+
+.banner-home.bh-sticky {
+  padding-top: 12.3em;
 }
 
 .banner-home H1 {
@@ -1325,14 +1340,12 @@ A.down:before {
   position: relative;
 }
 
-#logo-footer {
-  float: left;
-  margin-right: 5.5%;
-}
-
 #footer-menu {
-  float: left;
-  padding-top: 3.5em;
+  position: absolute;
+  left: 167px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 83.33%;
   line-height: 1em;
 }
@@ -1341,6 +1354,7 @@ A.down:before {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: inline-block;
 }
 
 #footer-menu UL LI {
@@ -1373,6 +1387,7 @@ A.down:before {
   position: absolute;
   right: 0;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1417,7 +1432,9 @@ A.instagram:link, A.instagram:visited { background: #517EA3; }
 .footer-left {
   width: 100%;
   position: absolute;
-  top: 50%; transform: translateY(-50%);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .copyright {
@@ -1455,6 +1472,7 @@ A.instagram:link, A.instagram:visited { background: #517EA3; }
   position: absolute;
   right: 0;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 80%;
 }
@@ -1663,6 +1681,7 @@ HR.event {
 .event-banner .overlay .site-width {
   position: relative;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   text-align: center;
   color: #FFFFFF;
@@ -1764,8 +1783,11 @@ HR.event {
 }
 
 .event-sponsors .site-width {
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 
@@ -2031,6 +2053,10 @@ HR.event {
     width: 96%;
   }
 
+  .header-home {
+    height: 600px;
+  }
+
   .subheader .fa-circle-o {
     display: block;
     visibility: hidden;
@@ -2039,11 +2065,23 @@ HR.event {
   }
 
   .banner-home {
-    padding-left: 6%;
+    padding: 1.6em 0 0 6%;
+  }
+
+  .banner-home.bh-sticky {
+    padding-top: 8.3em;
   }
 
   .banner-home H1 {
     font-size: 545%;
+  }
+
+  .banner-home-text {
+    padding-bottom: 3em;
+  }
+
+  .sponsors .site-width {
+    width: 100%;
   }
 
   .sponsors #sponsor-scroll DIV {
@@ -2090,6 +2128,15 @@ HR.event {
     font-size: 85%;
   }
 
+  .social {
+    width: 75px;
+  }
+
+  .social-icon,
+  .social A:link, .social A:visited {
+    margin: 0.25em 0 0.25em 0.5em;
+  }
+
   .backtotop .btt-text {
     display: none;
   }
@@ -2121,6 +2168,14 @@ HR.event {
   .event H4,
   .event UL LI {
     font-size: 165%;
+  }
+
+  .event-sponsors .site-width {
+    width: 100%;
+  }
+
+  .event-sponsors .site-width IMG {
+    max-width: 90px;
   }
 
   .ttg .one-half.center {
@@ -2158,6 +2213,10 @@ HR.event {
 
 @media only screen and (max-width: 600px) {
   /* Small tablet */
+  .header-home {
+    height: 700px;
+  }
+
   #menu-toggle {
     display: block;
     cursor: pointer;
@@ -2223,7 +2282,16 @@ HR.event {
   }
 
   .banner-home {
-    padding-top: 4em;
+    padding: 1.6em 0 0 1%;
+  }
+
+  .banner-home.bh-sticky {
+    padding-top: 8.3em;
+  }
+
+  .banner-home-text {
+    width: 100%;
+    padding-bottom: 3em;
   }
 
   .core-values .one-fourth,
@@ -2355,6 +2423,10 @@ HR.event {
     align-items: flex-start;
   }
 
+  .social {
+    width: auto;
+  }
+
   .copyright {
     display: block;
     border-right: 0;
@@ -2373,6 +2445,10 @@ HR.event {
   .backtotop {
     top: -60%;
     transform: none;
+  }
+
+  #menu-blog-menu {
+    margin: 1.5em 0;
   }
 
   .countdown-text,
@@ -2473,7 +2549,7 @@ HR.event {
 @media only screen and (max-width: 480px) {
   /* Phone */
   .header-home {
-    height: 600px;
+    height: 520px;
   }
 
   .header .menu,
