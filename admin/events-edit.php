@@ -32,6 +32,9 @@ $row = $result->fetch_array(MYSQLI_ASSOC);
   </div>
 
   <div class="one-half last">
+    <textarea name="details" placeholder="Details"><?php echo $row['details']; ?></textarea><br>
+    <br>
+
     <textarea name="schedule" placeholder="Schedule"><?php echo $row['schedule']; ?></textarea><br>
     <br>
 

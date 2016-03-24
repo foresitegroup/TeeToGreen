@@ -40,9 +40,15 @@ include "header.php";
 </div> <!-- END event-banner -->
 
 <div class="site-width event">
-  <?php if ($row['blurb'] != "") { ?>
+  <?php if ($row['blurb'] != "" && $row['details'] == "") { ?>
   <div class="blurb">
     <?php echo $row['blurb']; ?>
+  </div>
+  <?php } ?>
+
+  <?php if ($row['details'] != "") { ?>
+  <div class="details">
+    <?php echo $row['details']; ?>
   </div>
   <?php } ?>
 

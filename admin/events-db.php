@@ -14,6 +14,7 @@ switch ($_GET['a']) {
                   image,
                   sponsors,
                   blurb,
+                  details,
                   schedule,
                   registration,
                   home_summary
@@ -25,6 +26,7 @@ switch ($_GET['a']) {
                   '" . $_POST['image'] . "',
                   '" . $_POST['sponsors'] . "',
                   '" . $mysqli->real_escape_string($_POST['blurb']) . "',
+                  '" . $mysqli->real_escape_string($_POST['details']) . "',
                   '" . $mysqli->real_escape_string($_POST['schedule']) . "',
                   '" . $mysqli->real_escape_string($_POST['registration']) . "',
                   '" . $mysqli->real_escape_string($_POST['home_summary']) . "'
@@ -39,6 +41,7 @@ switch ($_GET['a']) {
                   image = '" . $_POST['image'] . "',
                   sponsors = '" . $_POST['sponsors'] . "',
                   blurb = '" . $mysqli->real_escape_string($_POST['blurb']) . "',
+                  details = '" . $mysqli->real_escape_string($_POST['details']) . "',
                   schedule = '" . $mysqli->real_escape_string($_POST['schedule']) . "',
                   registration = '" . $mysqli->real_escape_string($_POST['registration']) . "',
                   home_summary = '" . $mysqli->real_escape_string($_POST['home_summary']) . "'

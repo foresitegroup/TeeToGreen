@@ -692,13 +692,18 @@ A.down:before {
 }
 
 .home-event UL {
-  margin: 0 0 0 0;
+  margin: 0 0 0 0.5em;
   padding: 0 0 0 0;
   list-style-type: none;
   font-family: 'oswaldmedium', sans-serif;
-  font-size: 166.66%;
-  line-height: 1.5em;
+  font-size: 150%;
+  line-height: 1.1em;
   text-transform: uppercase;
+}
+
+.home-event LI {
+  text-indent: -0.5em;
+  padding-bottom: 0.4em;
 }
 
 .home-event LI:before {    
@@ -1708,11 +1713,16 @@ HR.event {
   margin: 1em 0 0.2em;
 }
 
-.event .blurb {
+.event .blurb,
+.event .details {
   font-size: 122.22%;
   text-align: center;
   padding-bottom: 2.5em;
   margin-bottom: 2.5em;
+}
+
+.event .details {
+  text-align: left;
 }
 
 .event .one-half {
@@ -1740,7 +1750,7 @@ HR.event {
   font-family: 'oswaldmedium', sans-serif;
   font-weight: normal;
   font-size: 172.22%;
-  line-height: 1em;
+  line-height: 1.2em;
   color: #28341A;
   margin: 0 0 0.1em;
 }

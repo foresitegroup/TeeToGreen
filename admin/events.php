@@ -31,6 +31,9 @@ include "header.php";
       <textarea name="blurb" placeholder="Blurb"></textarea><br>
       <br>
 
+       <textarea name="details" placeholder="Details"></textarea><br>
+      <br>
+
       <textarea name="schedule" placeholder="Schedule"></textarea><br>
       <br>
 
