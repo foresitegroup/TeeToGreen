@@ -16,8 +16,8 @@ include_once "inc/dbconfig.php";
         The First Tee's programs are designed around helping young people understand and ultimately develop Nine Core Values.
       </div>
 
-      <a href="#" class="ttg-button">Event Registration</a>
-      <a href="#" class="lm-button">Learn More</a>
+      <a href="event.php?1" class="ttg-button">Event Registration</a>
+      <a href="event.php?1" class="lm-button">Learn More</a>
     </div> <!-- END banner-home -->
   </div> <!-- END site-width -->
 </div> <!-- END header -->
@@ -235,12 +235,12 @@ include_once "inc/dbconfig.php";
     <span class="social-icon"><i class="fa fa-twitter"></i></span>
     
     <div class="twitter">
-      <a href="#" class="twitter-name">@TeeToGreen</a>
+      <a href="https://twitter.com/TeeToGreen_WI" class="twitter-name">@TeeToGreen_WI</a>
 
       <script type="text/javascript" src="inc/twitterFetcher.js"></script>
       <script>
         var config1 = {
-          "id": '435921074492948480',
+          "id": '713379463682269184',
           "domId": 'twitter-feed',
           "maxTweets": 4,
           "enableLinks": true,
@@ -254,7 +254,7 @@ include_once "inc/dbconfig.php";
 
       <div id="twitter-feed"></div>
 
-      <a href="#" class="arrow-link">Follow Us</a>
+      <a href="https://twitter.com/TeeToGreen_WI" class="arrow-link">Follow Us</a>
     </div> <!-- END twitter -->
   </div> <!-- END one-fourth -->
 </div> <!-- END news-twitter -->
