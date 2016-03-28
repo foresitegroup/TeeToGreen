@@ -715,6 +715,12 @@ A.down:before {
   color: #8EC641;
 }
 
+.home-event UL LI SPAN {
+  font-family: 'Oswald', sans-serif;
+  font-size: 85%;
+  line-height: 1.2em;
+}
+
 .home-event UL LI UL {
   display: none;
 }
@@ -1771,6 +1777,13 @@ HR.event {
   padding-bottom: 1em;
 }
 
+.event H4 DIV,
+.event UL LI SPAN {
+  font-family: 'Oswald', sans-serif;
+  font-size: 85%;
+  line-height: 1.2em;
+}
+
 .event UL LI UL {
   margin: 0 0 0 0.8em;
   list-style-type: circle;
@@ -2286,6 +2299,10 @@ HR.event {
     padding: 0;
   }
 
+  #main-menu UL LI UL LI A {
+    overflow: hidden;
+  }
+
   #main-menu UL LI UL LI A:hover,
   #main-menu UL LI UL LI A:active {
     color: #FFFFFF;
@@ -2468,7 +2485,7 @@ HR.event {
     text-align: center;
     padding-right: 0;
     border: 0;
-    font-size: 38px;
+    font-size: 37px;
   }
 
   .countdown-text .flex-width {
@@ -2675,8 +2692,12 @@ HR.event {
   .home-contact .mailing-list INPUT::-moz-placeholder { font-size: 75%; } /* FF 19+ */
   .home-contact .mailing-list INPUT:-ms-input-placeholder { font-size: 75%; } /* IE 10+ */
 
+  .subheader.countdown {
+    padding: 1em 0 0.8em;
+  }
+
   #countdown {
-    font-size: 45px;
+    font-size: 43px;
   }
 
   #countdown DIV DIV {
@@ -2684,7 +2705,7 @@ HR.event {
   }
 
   .event-banner H2 {
-    font-size: 70px;
+    font-size: 65px;
   }
 
   .event-banner H3 {

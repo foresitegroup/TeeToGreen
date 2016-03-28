@@ -2,7 +2,7 @@
   <li>
     <a href="<?php echo $TopDir; ?>tee-to-green.php">SUPPORTING</a>
     <ul>
-      <li><a href="<?php echo $TopDir; ?>tee-to-green.php">FIRST TEE</a></li>
+      <li><a href="<?php echo $TopDir; ?>tee-to-green.php">THE FIRST TEE OF SOUTHEAST WISCONSIN</a></li>
     </ul>
   </li>
   <li>
