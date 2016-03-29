@@ -16,7 +16,7 @@ include_once "inc/dbconfig.php";
         The First Tee's programs are designed around helping young people understand and ultimately develop Nine Core Values.
       </div>
 
-      <a href="event.php?1" class="ttg-button">Event Registration</a>
+      <!-- <a href="event.php?1" class="ttg-button">Event Registration</a> -->
       <a href="event.php?1" class="lm-button">Learn More</a>
     </div> <!-- END banner-home -->
   </div> <!-- END site-width -->
