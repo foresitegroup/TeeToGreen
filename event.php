@@ -24,7 +24,14 @@ include "header.php";
   </div>
 </div>
 
-<?php $image = ($row['image'] != "") ? $row['image'] : "event-generic.jpg"; ?>
+<?php
+// $image = ($row['image'] != "") ? $row['image'] : "event-generic.jpg";
+if ($row['image'] == "" && $row['image_banner'] == "") {
+  $image = "event-generic.jpg";
+} else {
+  $image = ($row['image_banner'] != "") ? $row['image_banner'] : $row['image'];
+}
+?>
 <div class="event-banner" style="background-image: url(images/<?php echo $image; ?>);">
   <div class="overlay">
     <div class="site-width">

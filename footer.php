@@ -6,8 +6,7 @@
     <div class="social">
       <a href="https://www.facebook.com/teetogreenwisconsin/" class="facebook"><i class="fa fa-facebook"></i></a>
       <a href="https://twitter.com/TeeToGreen_WI" class="twitter"><i class="fa fa-twitter"></i></a>
-      <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
-      <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.instagram.com/teetogreenwi/" class="instagram"><i class="fa fa-instagram"></i></a>
     </div>
   </div>
 

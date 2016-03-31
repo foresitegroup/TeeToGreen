@@ -23,12 +23,27 @@ if ($_SERVER['SERVER_NAME'] == "localhost") { $parts = explode("/", $_SERVER['RE
   <div class="site-width">
     <h3>Stay Informed with Event News &amp; Updates</h3>
 
-    <form>
-      <div class="mailing-list">
-        <input type="text" name="email" placeholder="Enter Your Email Address">
-        <input type="submit" name="subscribe" value="SIGN UP">
+    <div class="mailing-list">
+      <!-- Begin MailChimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="//tee-to-green.us13.list-manage.com/subscribe/post?u=a42a4a7e68cd900c638ebefcd&amp;id=4fe0f9ec46" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter Your Email Address">
+              <input type="submit" value="SIGN UP" name="subscribe" id="mc-embedded-subscribe">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a42a4a7e68cd900c638ebefcd_4fe0f9ec46" tabindex="-1" value=""></div>
+            <div class="clear"></div>
+          </div>
+        </form>
       </div>
-    </form>
+      <!--End mc_embed_signup-->
+    </div>
     
     <div class="contact">
       <script type="text/javascript">

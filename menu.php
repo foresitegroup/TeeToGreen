@@ -1,19 +1,19 @@
 <ul>
   <li>
-    <a href="<?php echo $TopDir; ?>tee-to-green.php">SUPPORTING</a>
+    <a href="<?php echo $TopDir; ?>tee-to-green.php" class="drop">SUPPORTING</a>
     <ul>
       <li><a href="<?php echo $TopDir; ?>tee-to-green.php">THE FIRST TEE OF SOUTHEAST WISCONSIN</a></li>
     </ul>
   </li>
   <li>
-    <a href="<?php echo $TopDir; ?>events.php">EVENTS</a>
+    <a href="<?php echo $TopDir; ?>events.php" class="drop">EVENTS</a>
     <ul>
       <li><a href="<?php echo $TopDir; ?>event.php?2">COOL BEANS</a></li>
       <li><a href="<?php echo $TopDir; ?>event.php?1">GOLF CLASSIC</a></li>
     </ul>
   </li>
   <li>
-    <a href="<?php echo $TopDir; ?>partners.php">PARTNERS</a>
+    <a href="<?php echo $TopDir; ?>partners.php" class="drop">PARTNERS</a>
     <ul>
       <li><a href="<?php echo $TopDir; ?>partners.php#become">BECOME A PARTNER</a></li>
       <li><a href="<?php echo $TopDir; ?>ambassadors-club.php">AMBASSADORS CLUB</a></li>
