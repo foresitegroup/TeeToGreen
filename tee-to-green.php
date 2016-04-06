@@ -1,5 +1,7 @@
 <?php
 $PageTitle = "Tee To Green";
+$Description = "The goal of The First Tee of Southeast Wisconsin is to incorporate responsibility, courtesy, honesty and integrity - all values inherent in the game of golf - into the daily lives of those who participate.";
+$Keywords = "tee to green, first tee, first tee of southeast wisconsin, first tee of southeastern wisconsin, golf, golf fundraiser, teaching golf, youth golf, youth golf program, empowering youth, wisconsin golf, golf in wisconsin, golf fundraiser in wisconsin, tee to green golf classic, golf classic, golf classic at the wisconsin club, the wisconsin club, learn valuable life skills";
 
 include "header.php";
 ?>

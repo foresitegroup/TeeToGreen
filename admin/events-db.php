@@ -18,7 +18,9 @@ switch ($_GET['a']) {
                   details,
                   schedule,
                   registration,
-                  home_summary
+                  home_summary,
+                  meta_description,
+                  meta_keywords
                   ) VALUES(
                   '" . $mysqli->real_escape_string($_POST['title']) . "',
                   '" . $TheDate . "',
@@ -31,7 +33,9 @@ switch ($_GET['a']) {
                   '" . $mysqli->real_escape_string($_POST['details']) . "',
                   '" . $mysqli->real_escape_string($_POST['schedule']) . "',
                   '" . $mysqli->real_escape_string($_POST['registration']) . "',
-                  '" . $mysqli->real_escape_string($_POST['home_summary']) . "'
+                  '" . $mysqli->real_escape_string($_POST['home_summary']) . "',
+                  '" . $mysqli->real_escape_string($_POST['meta_description']) . "',
+                  '" . $mysqli->real_escape_string($_POST['meta_keywords']) . "'
                   )");
     break;
   case "edit":
@@ -47,7 +51,9 @@ switch ($_GET['a']) {
                   details = '" . $mysqli->real_escape_string($_POST['details']) . "',
                   schedule = '" . $mysqli->real_escape_string($_POST['schedule']) . "',
                   registration = '" . $mysqli->real_escape_string($_POST['registration']) . "',
-                  home_summary = '" . $mysqli->real_escape_string($_POST['home_summary']) . "'
+                  home_summary = '" . $mysqli->real_escape_string($_POST['home_summary']) . "',
+                  meta_description = '" . $mysqli->real_escape_string($_POST['meta_description']) . "',
+                  meta_keywords = '" . $mysqli->real_escape_string($_POST['meta_keywords']) . "'
                   WHERE id = '" . $_POST['id'] . "'");
     break;
   case "delete":

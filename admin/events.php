@@ -46,6 +46,12 @@ include "header.php";
       <textarea name="home_summary" placeholder="Home Page Summary"></textarea><br>
       <br>
 
+      <textarea name="meta_description" placeholder="Description Meta Tag"><?php echo $row['meta_description']; ?></textarea><br>
+      <br>
+
+      <textarea name="meta_keywords" placeholder="Keywords Meta Tag"><?php echo $row['meta_keywords']; ?></textarea><br>
+      <br>
+
       <input type="submit" name="submit" value="ADD EVENT">
     </div>
   </form>

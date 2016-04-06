@@ -11,7 +11,7 @@ if ($_POST['confirmationCAP'] == "") {
      )
   {
     $Subject = (!empty($_POST[md5('subject' . $_POST['ip'] . $salt . $_POST['timestamp'])])) ? $_POST[md5('subject' . $_POST['ip'] . $salt . $_POST['timestamp'])] : "Contact From Tee To Green Website";
-    $SendTo = "cbuchach@outlook.com";
+    $SendTo = "cbuchach@outlook.com,mark@foresitegrp.com";
     $From = "From: Contact Form <contactform@tee-to-green.org>\r\n";
     $From .= "Reply-To: " . $_POST[md5('email' . $_POST['ip'] . $salt . $_POST['timestamp'])] . "\r\n";
 

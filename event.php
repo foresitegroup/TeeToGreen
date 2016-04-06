@@ -5,6 +5,8 @@ $result = $mysqli->query("SELECT * FROM events WHERE id = " . $_SERVER['QUERY_ST
 $row = $result->fetch_array(MYSQLI_ASSOC);
 
 $PageTitle = $row['title'];
+$Description = $row['meta_description'];
+$Keywords = $row['meta_keywords'];
 
 include "header.php";
 ?>

@@ -1,5 +1,7 @@
 <?php
 $PageTitle = "Contact Us";
+$Description = "Are you interested in an event, sponsorship and/or partnership? Do you have questions, comments or concerns? Feel free to reach out to us directly.";
+$Keywords = "tee to green, first tee, first tee of southeast wisconsin, first tee of southeastern wisconsin, golf, golf fundraiser, teaching golf, youth golf, youth golf program, empowering youth, wisconsin golf, golf in wisconsin, golf fundraiser in wisconsin, tee to green golf classic, golf classic, golf classic at the wisconsin club, the wisconsin club, learn valuable life skills, contact us, contact tee to green";
 include "header.php";
 ?>
 

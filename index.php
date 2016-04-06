@@ -1,5 +1,7 @@
 <?php
 $PageTitle = "";
+$Description = "Welcome to the home page for Tee To Green! T2G supports The First Tee of Southeastern Wisconsin; Supporting programs designed around helping young people learn life long values through the game of golf.";
+$Keywords = "tee to green, first tee, first tee of southeast wisconsin, first tee of southeastern wisconsin, golf, golf fundraiser, teaching golf, youth golf, youth golf program, empowering youth, wisconsin golf, golf in wisconsin, golf fundraiser in wisconsin, tee to green golf classic, golf classic, golf classic at the wisconsin club, the wisconsin club, learn valuable life skills";
 
 include "header.php";
 
