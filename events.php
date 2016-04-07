@@ -1,5 +1,7 @@
 <?php
 $PageTitle = "Events";
+$Description = "";
+$Keywords = "";
 
 include "header.php";
 

@@ -1,5 +1,8 @@
 <?php
 $PageTitle = "Ambassadors Club";
+$Description = "";
+$Keywords = "";
+
 include "header.php";
 ?>
 

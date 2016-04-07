@@ -1,5 +1,7 @@
 <?php
 $PageTitle = "Our Partners";
+$Description = "";
+$Keywords = "";
 
 include "header.php";
 ?>
