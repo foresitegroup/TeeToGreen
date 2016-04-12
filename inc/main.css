@@ -1599,6 +1599,11 @@ A.instagram:link, A.instagram:visited { background: #517EA3; }
   margin: 4em 0 2em;
 }
 
+.entry-content IMG {
+  max-width: 100%;
+  height: auto;
+}
+
 HR.event {
   border: none 0;
   border-top: 1px solid #D7D7D7; /* the border */
