@@ -1188,12 +1188,14 @@ A.down:before {
   position: relative;
 }
 
-.partners-form,
+.partners-form {
+  background: linear-gradient(to bottom, #1F2717 0%, #1F2717 70%, transparent 70%, transparent 100%);
+}
+
 .tee-to-green {
   position: relative;
 }
 
-.partners-form:before,
 .event-sponsor:before,
 .tee-to-green:before {
   content:"";
@@ -1263,6 +1265,28 @@ A.down:before {
   color: #FFFFFF;
   font-size: 111.11%;
   line-height: 1.5em;
+}
+
+.partners-form .full {
+  color: #FFFFFF;
+  font-size: 111.11%;
+  line-height: 1.5em;
+}
+
+.partners-form .full HR {
+  border-top: 1px solid #FFFFFF;
+  width: 100%;
+  margin: 2em 0;
+}
+
+.partners-form .full UL LI {
+  line-height: 1.2em;
+  padding: 0.5em 0;
+}
+
+.partners-form A:hover,
+.partners-form A:active {
+  color: #DDDDDD;
 }
 
 .contact .radio {
@@ -2413,13 +2437,18 @@ HR.event {
   .event-sponsor .one-third,
   .event-sponsor .two-third,
   .tee-to-green .one-third,
-  .tee-to-green .two-third {
+  .tee-to-green .two-third,
+  .partners-form .full {
     float: none;
     width: 100%;
     box-sizing: border-box;
     padding: 0 3% 3em;
     margin: 0 auto;
     background: #1F2717;
+  }
+  
+  .partners-form .two-third {
+    padding: 0 3%;
   }
 
   .tee-to-green .one-third,

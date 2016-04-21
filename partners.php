@@ -17,37 +17,37 @@ include "header.php";
 
   <div class="partners">
     <div class="four-col">
-      <img src="images/partner-adidas.png" alt="Adidas">
+      <a href="http://www.adidas.com"><img src="images/partner-adidas.png" alt="Adidas"></a>
     </div>
 
     <div class="four-col">
-      <img src="images/partner-foresite.png" alt="Foresite Group">
+      <a href="http://www.foresitegrp.com"><img src="images/partner-foresite.png" alt="Foresite Group"></a>
     </div>
 
     <div class="four-col">
-      <img src="images/partner-eggers.png" alt="Eggers">
+      <a href="http://www.eggersimprints.com"><img src="images/partner-eggers.png" alt="Eggers"></a>
     </div>
 
     <div class="four-col">
-      <img src="images/partner-lpga.png" alt="LPGA">
+      <a href="http://www.lpga.com"><img src="images/partner-lpga.png" alt="LPGA"></a>
     </div>
   </div>
 
   <div class="partners">
     <div class="four-col">
-      <img src="images/partner-raven.png" alt="Raven">
+      <a href="http://www.ravensports.org"><img src="images/partner-raven.png" alt="Raven"></a>
     </div>
 
     <div class="four-col">
-      <img src="images/partner-rbc.png" alt="RBC">
+      <a href="http://www.rbcroyalbank.com"><img src="images/partner-rbc.png" alt="RBC"></a>
     </div>
 
     <div class="four-col">
-      <img src="images/partner-taylormade.png" alt="TaylorMade">
+      <a href="http://taylormadegolf.com"><img src="images/partner-taylormade.png" alt="TaylorMade"></a>
     </div>
 
     <div class="four-col">
-      <img src="images/partner-pga.png" alt="PGA">
+      <a href="http://www.pga.com"><img src="images/partner-pga.png" alt="PGA"></a>
     </div>
   </div>
 </div>
@@ -128,6 +128,25 @@ include "header.php";
     </div>
 
     <div style="clear: both;"></div>
+    
+    <div class="full">
+      <hr>
+
+      The First Tee of Southeast Wisconsin is grateful for the philanthropic support of the many individuals, corporations, foundations, and other organizations that financially contribute to our Chapter. Without your generosity we would be unable to have the positive impact on thousands of youth in our community and surrounding areas.<br>
+      <br>
+
+      <ul>
+        <li><span style="color: #8EC641;">Legacy Partner</span>: $25,000 per year, minimum 4-year commitment.</li>
+        <li><span style="color: #8EC641;">9 Core Values Sponsor</span>: $10,000 per year, minimum 4-year commitment</li>
+        <li><span style="color: #8EC641;">9 Healthy Habits Sponsor</span>: $5,000 per year, minimum 4-year commitment</li>
+        <li><span style="color: #8EC641;">Donate in Tribute</span>: $1,250 one time gift</li>
+        <li><span style="color: #8EC641;">Ambassadors Club</span>: $500 per year, renewable yearly</li>
+        <li><span style="color: #8EC641;">Scorecard Sponsor</span>: $250 per year, renewable yearly</li>
+      </ul>
+      <br>
+
+      See all the sponsorship details <a href="pdf/2016_Sponsorship.pdf">HERE</a>.
+    </div>
 
     <div class="contact">
       <script type="text/javascript">
