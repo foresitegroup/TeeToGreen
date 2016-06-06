@@ -8,6 +8,7 @@
   <li>
     <a href="<?php echo $TopDir; ?>events.php" class="drop">EVENTS</a>
     <ul>
+      <li><a href="<?php echo $TopDir; ?>event.php?3">RUMMAGE SALE</a></li>
       <li><a href="<?php echo $TopDir; ?>event.php?2">COOL BEANS</a></li>
       <li><a href="<?php echo $TopDir; ?>event.php?1">GOLF CLASSIC</a></li>
     </ul>
