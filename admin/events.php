@@ -13,7 +13,13 @@ include "header.php";
       <input type="text" name="title" placeholder="Title"><br>
       <br>
 
+      <input type="text" name="short_title" placeholder="Short Title"><br>
+      <br>
+
       <input type="text" name="date" placeholder="Date"><br>
+      <br>
+
+      <input type="text" name="enddate" placeholder="End Date"><br>
       <br>
 
       <input type="text" name="location" placeholder="Location"><br>
@@ -72,7 +78,9 @@ include "header.php";
 
     <div class="three-fourth last">
       <strong><?php echo $row['title']; ?></strong><br>
-      <?php echo ($row['date'] != "") ? date("n/j/Y", $row['date']) : "TBA"; ?><br>
+      <?php echo ($row['date'] != "") ? date("n/j/Y", $row['date']) : "TBA"; ?>
+      <?php echo ($row['enddate'] != "") ? " - " . date("n/j/Y", $row['enddate']) : ""; ?>
+      <br>
       <br>
     </div>
     <?php

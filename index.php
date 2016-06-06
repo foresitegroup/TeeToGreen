@@ -84,7 +84,20 @@ include_once "inc/dbconfig.php";
       <h1>UPCOMING EVENT</h1>
       <h2><?php echo $row['title']; ?></h2>
       <hr>
-      <h3><?php echo date("F j<\s\u\p>S</\s\u\p> Y", $row['date']); ?></h3>
+      <h3>
+        <?php
+        if ($row['enddate'] != "") {
+          $startdate = date("F j", $row['date']);
+          $enddate = date("j<\s\u\p>S</\s\u\p> Y", $row['enddate']);
+
+          if (date("Y", $row['date']) != date("Y", $row['enddate'])) $startdate .= date("<\s\u\p>S</\s\u\p> Y", $startdate );
+          if (date("F", $row['date']) != date("F", $row['enddate'])) $enddate = date("F ", $row['enddate']) . $enddate;
+          echo $startdate . " - " . $enddate;
+        } else {
+          echo date("F j<\s\u\p>S</\s\u\p> Y", $row['date']);
+        }
+        ?>
+      </h3>
       <h4><span>LOCATION:</span> <?php echo $row['location']; ?></h4>
       <?php echo $row['location_address']; ?>
     </div> <!-- END col2 -->

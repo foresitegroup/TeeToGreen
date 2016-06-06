@@ -3,12 +3,15 @@ date_default_timezone_set("America/Chicago");
 include("../inc/dbconfig.php");
 
 $TheDate = ($_POST['date'] != "") ? strtotime($_POST['date']) : "";
+$TheEndDate = ($_POST['enddate'] != "") ? strtotime($_POST['enddate']) : "";
 
 switch ($_GET['a']) {
   case "add":
     $mysqli->query("INSERT INTO events (
                   title,
+                  short_title,
                   date,
+                  enddate,
                   location,
                   location_address,
                   image,
@@ -23,7 +26,9 @@ switch ($_GET['a']) {
                   meta_keywords
                   ) VALUES(
                   '" . $mysqli->real_escape_string($_POST['title']) . "',
+                  '" . $mysqli->real_escape_string($_POST['short_title']) . "',
                   '" . $TheDate . "',
+                  '" . $TheEndDate . "',
                   '" . $mysqli->real_escape_string($_POST['location']) . "',
                   '" . $mysqli->real_escape_string($_POST['location_address']) . "',
                   '" . $_POST['image'] . "',
@@ -41,7 +46,9 @@ switch ($_GET['a']) {
   case "edit":
     $mysqli->query("UPDATE events SET
                   title = '" . $mysqli->real_escape_string($_POST['title']) . "',
+                  short_title = '" . $mysqli->real_escape_string($_POST['short_title']) . "',
                   date = '" . $TheDate  . "',
+                  enddate = '" . $TheEndDate  . "',
                   location = '" . $mysqli->real_escape_string($_POST['location']) . "',
                   location_address = '" . $_POST['location_address'] . "',
                   image = '" . $_POST['image'] . "',

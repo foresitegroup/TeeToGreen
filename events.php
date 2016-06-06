@@ -17,7 +17,7 @@ $now = time();
       $date = $now;
     } else {
       $row = $result->fetch_array(MYSQLI_ASSOC);
-      $title = $row['title'];
+      $title = ($row['short_title'] != "") ? $row['short_title'] : $row['title'];
       $date = date("n/j/Y G:i:s", $row['date']);
     }
     ?>

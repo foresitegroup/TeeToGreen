@@ -37,7 +37,21 @@ if ($row['image'] == "" && $row['image_banner'] == "") {
 <div class="event-banner" style="background-image: url(images/<?php echo $image; ?>);">
   <div class="overlay">
     <div class="site-width">
-      <h3><?php echo ($row['date'] != "") ? date("F j, Y", $row['date']) : "TBA"; ?></h3>
+      <h3>
+        <?php
+        if ($row['enddate'] != "") {
+          $startdate = date("F j", $row['date']);
+          $enddate = date("j, Y", $row['enddate']);
+
+          if (date("Y", $row['date']) != date("Y", $row['enddate'])) $startdate .= date(", Y", $startdate );
+          if (date("F", $row['date']) != date("F", $row['enddate'])) $enddate = date("F ", $row['enddate']) . $enddate;
+          echo $startdate . "-" . $enddate;
+        } else {
+          // echo date("F j<\s\u\p>S</\s\u\p> Y", $row['date']);
+          echo ($row['date'] != "") ? date("F j, Y", $row['date']) : "TBA";
+        }
+        ?>
+      </h3>
       <h2><?php echo $row['title']; ?></h2>
       <?php if ($row['location'] != "") { ?>
       <img src="images/pin-gray.png" alt="">
