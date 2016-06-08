@@ -50,6 +50,20 @@ include "header.php";
       <a href="http://www.pga.com"><img src="images/partner-pga.png" alt="PGA"></a>
     </div>
   </div>
+
+  <div class="partners">
+    <div class="four-col">
+      <a href="http://www.mercedesofmilwaukeenorth.com"><img src="images/partner-mercedes.png" alt="Mercedes-Benz of Milwaukee North"></a>
+    </div>
+
+    <div class="four-col"></div>
+
+    <div class="four-col"></div>
+
+    <div class="four-col">
+      <a href="http://www.thefirstteesoutheastwisconsin.org"><img src="images/first-tee-logo.png" alt="The First Tee of Southeast Wisconsin"></a>
+    </div>
+  </div>
 </div>
 
 <div class="friends">
