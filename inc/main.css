@@ -2100,6 +2100,41 @@ HR.event {
   color: #8EC641;
 }
 
+.committee {
+  padding-bottom: 4em;
+}
+
+.committee .one-third {
+  margin: 4em 5% 4em 0;
+  font-size: 77.77%;
+  line-height: 1.2em;
+}
+
+.committee .one-third:nth-of-type(3n) {
+  margin-right: 0;
+  clear: right;
+}
+
+.committee .one-third DIV {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.committee .one-third DIV:after {
+  padding-top: 100%;
+  display: block;
+  content: '';
+}
+
+.committee .one-third H3 {
+  margin: 1em 0 0.3em;
+  font-weight: 600;
+  font-size: 157.14%;
+  line-height: 1em;
+}
+
 @media only screen and (max-width: 800px) {
   /* Small computer or landscape tablet */
   .site-width {
@@ -2618,6 +2653,21 @@ HR.event {
     -moz-column-gap: 0;
     column-gap: 0;
   }
+
+  .committee .one-third {
+    width: 48%;
+    margin: 4em 4% 4em 0;
+  }
+
+  .committee .one-third:nth-of-type(3n) {
+    margin-right: 4%;
+    clear: none;
+  }
+
+  .committee .one-third:nth-of-type(2n) {
+    margin-right: 0;
+    clear: right;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2787,5 +2837,16 @@ HR.event {
   .partners .four-col {
     width: 100%;
     padding: 0;
+  }
+
+  .committee .one-third {
+    width: 100%;
+    margin: 4em 0;
+  }
+
+  .committee .one-third:nth-of-type(3n),
+  .committee .one-third:nth-of-type(2n) {
+    margin-right: 0;
+    clear: right;
   }
 }

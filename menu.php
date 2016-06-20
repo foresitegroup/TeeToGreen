@@ -21,5 +21,10 @@
     </ul>
   </li>
   <li><a href="<?php echo $TopDir; ?>news">NEWS</a></li>
-  <li><a href="<?php echo $TopDir; ?>contact.php">CONTACT</a></li>
+  <li>
+    <a href="<?php echo $TopDir; ?>contact.php" class="drop">CONTACT</a>
+    <ul>
+      <li><a href="<?php echo $TopDir; ?>committee.php">COMMITTEE</a></li>
+    </ul>
+  </li>
 </ul>
