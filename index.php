@@ -8,20 +8,24 @@ include "header.php";
 include_once "inc/dbconfig.php";
 ?>
 
-  <div class="site-width">
-    <div class="banner-home">
-      <h1><?php echo date("F j<\s\u\p>S</\s\u\p> Y", $GLOBALS['EventDate']); ?></h1>
+  <div class="cycle-slideshow home-slides" data-cycle-slides="> div" data-cycle-timeout="8000" data-cycle-pause-on-hover="true">
+    <div style="background-image: url(images/home-slide1.jpg);">
+      <div class="site-width">
+        <span class="greentext">TEE TO GREEN</span> supports the First Tee of Southeastern Wisconsin through a series of charitable events, including the Golf Classic.<br>
+        <br>
 
-      <h2><img src="images/pin.png" alt="" style="margin-right: 0.25em;"> Tee To Green Golf Classic - <?php echo $GLOBALS['EventLoc']; ?></h2>
-
-      <div class="banner-home-text">
-        Tee To Green supports The First Tee of Southeastern Wisconsin; Supporting programs designed around helping young people learn life long values through the game of golf.
+        <a href="tee-to-green.php" class="ttg-button">Learn More</a>
       </div>
+    </div>
+    <div style="background-image: url(images/home-slide2.jpg);">
+      <div class="site-width" style="font-size: larger;">
+        GOLF PACKAGES, MEMORABILIA &amp; MORE AVAILABLE - BID TODAY!<br>
+        <br>
 
-      <!-- <a href="event.php?1" class="ttg-button">Event Registration</a> -->
-      <a href="event.php?1" class="lm-button">Learn More</a>
-    </div> <!-- END banner-home -->
-  </div> <!-- END site-width -->
+        <a href="http://501auctions.com/teetogreen" class="ttg-button">Learn More</a>
+      </div>
+    </div>
+  </div>
 </div> <!-- END header -->
 
 <div class="sponsors">
@@ -108,7 +112,7 @@ include_once "inc/dbconfig.php";
       <div class="event-blurb">
         <?php echo $row['blurb']; ?>
       </div>
-      
+
       <?php //echo $row['schedule']; ?>
 
       <!-- <div class="event-schedule-details">
@@ -223,7 +227,7 @@ include_once "inc/dbconfig.php";
         endforeach;
         ?>
       </div> <!-- END news-col1 -->
-      
+
       <div class="news-col2">
         <?php
         $posts = get_posts('posts_per_page=2&order=DESC&orderby=date&offset=1');
@@ -250,7 +254,7 @@ include_once "inc/dbconfig.php";
 
   <div class="one-fourth last">
     <span class="social-icon"><i class="fa fa-twitter"></i></span>
-    
+
     <div class="twitter">
       <a href="https://twitter.com/TeeToGreen_WI" class="twitter-name">@TeeToGreen_WI</a>
 
@@ -301,7 +305,7 @@ include_once "inc/dbconfig.php";
       </div>
       <!--End mc_embed_signup-->
     </div>
-    
+
     <div class="contact">
       <script type="text/javascript">
         $(document).ready(function() {
@@ -309,14 +313,14 @@ include_once "inc/dbconfig.php";
           var formMessages = $('#contact-form-messages');
           $(form).submit(function(event) {
             event.preventDefault();
-            
+
             function formValidation() {
               if ($('#name').val() === '') { alert('Name required.'); $('#name').focus(); return false; }
               if ($('#email').val() === '') { alert('Email required.'); $('#email').focus(); return false; }
               if ($('#message').val() === '') { alert('Message required.'); $('#message').focus(); return false; }
               return true;
             }
-            
+
             if (formValidation()) {
               var formData = $(form).serialize();
               formData += '&src=ajax';
@@ -358,7 +362,7 @@ include_once "inc/dbconfig.php";
       unset($_SESSION['feedback']);
       ?>
       </noscript>
-      
+
       <div id="contact-form-messages"><?php echo $feedback; ?></div>
       <h2>Contact Us!</h2>
       <div class="required">* Required</div>
