@@ -19,7 +19,7 @@ include_once "inc/dbconfig.php";
     </div>
     <div style="background-image: url(images/home-slide2.jpg);">
       <div class="site-width" style="font-size: larger;">
-        GOLF PACKAGES, MEMORABILIA &amp; MORE AVAILABLE - BID TODAY!<br>
+        GOLF PACKAGES, MEMORABILIA &amp; MORE AVAILABLE - BID AT THE AUCTION TODAY!<br>
         <br>
 
         <a href="http://501auctions.com/teetogreen" class="ttg-button">Learn More</a>
