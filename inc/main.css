@@ -2622,7 +2622,8 @@ HR.event {
   }
 
   .sponsors #sponsor-scroll DIV IMG {
-    height: 55px;
+    max-width: 30%;
+    max-height: 55px;
     width: auto;
     margin-left: 7%;
   }
