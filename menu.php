@@ -11,7 +11,7 @@
       <li><a href="<?php echo $TopDir; ?>event.php?3">RUMMAGE SALE</a></li>
       <li><a href="<?php echo $TopDir; ?>event.php?2">COOL BEANS</a></li>
       <li><a href="<?php echo $TopDir; ?>event.php?1">GOLF CLASSIC</a></li>
-      <li><a href="http://501auctions.com/teetogreen">AUCTION</a></li>
+      <!-- <li><a href="http://501auctions.com/teetogreen">AUCTION</a></li> -->
     </ul>
   </li>
   <li>
