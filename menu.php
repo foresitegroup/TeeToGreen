@@ -8,10 +8,10 @@
   <li>
     <a href="<?php echo $TopDir; ?>events.php" class="drop">EVENTS</a>
     <ul>
-      <li><a href="<?php echo $TopDir; ?>event.php?3">RUMMAGE SALE</a></li>
       <li><a href="<?php echo $TopDir; ?>event.php?2">COOL BEANS</a></li>
+      <li><a href="<?php echo $TopDir; ?>event.php?3">HUNT 'EM UP</a></li>
+      <li><a href="<?php echo $TopDir; ?>event.php?4">BOWLING TOURNAMENT</a></li>
       <li><a href="<?php echo $TopDir; ?>event.php?1">GOLF CLASSIC</a></li>
-      <!-- <li><a href="http://501auctions.com/teetogreen">AUCTION</a></li> -->
     </ul>
   </li>
   <li>

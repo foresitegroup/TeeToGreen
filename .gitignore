@@ -5,3 +5,4 @@ news/wp-content/*
 news/wp-content/themes/*
 !news/wp-content/themes/teetogreen
 news/wp-content/themes/teetogreen/.DS_Store
+.DS_Store
