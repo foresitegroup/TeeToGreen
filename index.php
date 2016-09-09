@@ -11,7 +11,7 @@ include_once "inc/dbconfig.php";
   <div class="cycle-slideshow home-slides" data-cycle-slides="> div" data-cycle-timeout="8000" data-cycle-pause-on-hover="true">
     <div style="background-image: url(images/home-slide1.jpg);">
       <div class="site-width">
-        <span class="greentext">TEE TO GREEN</span> supports the First Tee of Southeastern Wisconsin through a series of charitable events, including the Golf Classic.<br>
+        <span class="greentext">TEE TO GREEN</span> supports The First Tee of Southeast Wisconsin through a series of events that include the Golf Classic, Hunt'em Up for Charity &amp; the Holiday Ball Bowling Tournament.<br>
         <br>
 
         <a href="tee-to-green.php" class="ttg-button">Learn More</a>
