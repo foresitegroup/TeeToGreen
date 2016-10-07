@@ -159,7 +159,7 @@ include "header.php";
       </ul>
       <br>
 
-      See all the sponsorship details <a href="pdf/2016_Sponsorship.pdf">HERE</a>.
+      See all the sponsorship details <a href="pdf/Sponsorship_Review.pdf">HERE</a>.
     </div>
 
     <div class="contact">
