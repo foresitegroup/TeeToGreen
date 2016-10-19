@@ -29,7 +29,10 @@ include "header.php";
     </ul>
     <br>
 
-    <a href="pdf/Ambassadors_Club.pdf" class="down">DOWNLOAD FORM</a>
+    <a href="pdf/Ambassadors_Club.pdf" class="down">DOWNLOAD FORM</a><br>
+    <br>
+
+    <a href="https://thefirstteesoutheastwisco.givingfuel.com/donatenow" class="down">JOIN THE AMBASSADORS CLUB!</a>
   </div>
 </div>
 
