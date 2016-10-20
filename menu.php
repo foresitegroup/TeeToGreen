@@ -1,3 +1,4 @@
+<?php include_once "inc/dbconfig.php"; ?>
 <ul>
   <li>
     <a href="<?php echo $TopDir; ?>tee-to-green.php" class="drop">SUPPORTING</a>
@@ -8,10 +9,11 @@
   <li>
     <a href="<?php echo $TopDir; ?>events.php" class="drop">EVENTS</a>
     <ul>
-      <li><a href="<?php echo $TopDir; ?>event.php?2">COOL BEANS</a></li>
-      <li><a href="<?php echo $TopDir; ?>event.php?3">HUNT 'EM UP</a></li>
-      <li><a href="<?php echo $TopDir; ?>event.php?4">BOWLING TOURNAMENT</a></li>
-      <li><a href="<?php echo $TopDir; ?>event.php?1">GOLF CLASSIC</a></li>
+      <?php
+      $result = $mysqli->query("SELECT * FROM events WHERE embargo = '' ORDER BY date ASC");
+      while($row = $result->fetch_array(MYSQLI_ASSOC)) {?>
+      <li><a href="<?php echo $TopDir; ?>event.php?<?php echo $row['id']; ?>" style="text-transform: uppercase;"><?php echo $row['title']; ?></a></li>
+      <?php } ?>
     </ul>
   </li>
   <li>

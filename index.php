@@ -77,10 +77,10 @@ include_once "inc/dbconfig.php";
   <div class="site-width sr-bottom">
     <?php
     $now = time();
-    $result = $mysqli->query("SELECT * FROM events WHERE date >= $now ORDER BY date ASC LIMIT 1");
+    $result = $mysqli->query("SELECT * FROM events WHERE embargo = '' AND date >= $now ORDER BY date ASC LIMIT 1");
     if ($result->num_rows === 0) {
       mysqli_free_result($result);
-      $result = $mysqli->query("SELECT * FROM events ORDER BY date DESC LIMIT 1");
+      $result = $mysqli->query("SELECT * FROM events WHERE embargo = '' ORDER BY date DESC LIMIT 1");
     }
     $row = $result->fetch_array(MYSQLI_ASSOC);
     ?>
