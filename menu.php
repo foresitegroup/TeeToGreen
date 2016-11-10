@@ -10,9 +10,9 @@
     <a href="<?php echo $TopDir; ?>events.php" class="drop">EVENTS</a>
     <ul>
       <?php
-      $result = $mysqli->query("SELECT * FROM events WHERE embargo = '' ORDER BY date ASC");
-      while($row = $result->fetch_array(MYSQLI_ASSOC)) {?>
-      <li><a href="<?php echo $TopDir; ?>event.php?<?php echo $row['id']; ?>" style="text-transform: uppercase;"><?php echo $row['title']; ?></a></li>
+      $menuresult = $mysqli->query("SELECT * FROM events WHERE embargo = '' ORDER BY date ASC");
+      while($menurow = $menuresult->fetch_array(MYSQLI_ASSOC)) {?>
+      <li><a href="<?php echo $TopDir; ?>event.php?<?php echo $menurow['id']; ?>" style="text-transform: uppercase;"><?php echo $menurow['title']; ?></a></li>
       <?php } ?>
     </ul>
   </li>
